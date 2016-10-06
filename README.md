@@ -27,7 +27,7 @@ Feature for the CPN Tools metamodels and I/O utilities. Included plugins are:
 * io.github.abelgomez.cpntools
 * io.github.abelgomez.cpntools.io
 
-#### [io.github.abelgomez.ps.sdk.feature](features/io.github.abelgomez.ps.sdk.feature)
+#### [io.github.abelgomez.cpntools.sdk.feature](features/io.github.abelgomez.cpntools.sdk.feature)
 
 Feature for the SDK. Includes all the previous features and the additional test plugin:
 

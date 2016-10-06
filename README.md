@@ -2,6 +2,12 @@
 
 This repository contains the necessary plug-ins to create CPN Tools files from EMF. In addition, it provides capabilities to layout and serialize the EMF-compatible Petri nets into the "normative" CPN Tools XML format.
 
+## Installing the *CPN Tools toolkit*
+
+In Eclipse, go to `Help -> Install New Software...` and use http://som-research.github.io/cpntools.toolkit/updates/ as the URL for the update site.
+
+The *CPN Tools toolkit* requires [Eclipse Neon](https://eclipse.org/neon/) (4.6) or higher. 
+
 ## Repository contents
 
 ### Plug-in Projects

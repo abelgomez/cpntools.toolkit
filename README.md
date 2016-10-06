@@ -1,6 +1,6 @@
 # CPN Tools toolkit
 
-This repository contains the necessary plug-ins to create CPN Tools files from EMF. In Addition, it provides capabilities to layout and serialize the EMF-compatible Petri nets into the "normative" CPN Tools XML format.
+This repository contains the necessary plug-ins to create CPN Tools files from EMF. In addition, it provides capabilities to layout and serialize the EMF-compatible Petri nets into the "normative" CPN Tools XML format.
 
 ## Repository contents
 

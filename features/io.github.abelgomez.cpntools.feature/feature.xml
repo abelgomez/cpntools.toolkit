@@ -9,18 +9,18 @@
     Contributors:
         Abel Gómez (agomezlla@uoc.edu) - initial API and implementation
  -->
-
 <feature
       id="io.github.abelgomez.cpntools.feature"
       label="CPN Tools Support"
       version="0.1.0.qualifier"
       provider-name="Abel Gómez">
 
-   <description url="https://github.com/SOM-Research/publish-subscribe/">
-      Plug-ins supporting Petri nets conforming to the CPN Tools simulation toolkit.
+   <description url="https://github.com/SOM-Research/cpntools.toolkit">
+      Plug-ins supporting Petri nets conforming to the CPN Tools simulation
+toolkit.
    </description>
 
-   <copyright url="https://github.com/SOM-Research/publish-subscribe/">
+   <copyright url="https://github.com/SOM-Research/cpntools.toolkit">
       Abel Gómez Copyright (c) 2016
    </copyright>
 

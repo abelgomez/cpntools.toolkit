@@ -16,8 +16,7 @@
       provider-name="Abel Gómez">
 
    <description url="https://github.com/SOM-Research/cpntools.toolkit">
-      Plug-ins supporting Petri nets conforming to the CPN Tools simulation
-toolkit.
+      Plug-ins supporting Petri nets conforming to the CPN Tools tool.
    </description>
 
    <copyright url="https://github.com/SOM-Research/cpntools.toolkit">

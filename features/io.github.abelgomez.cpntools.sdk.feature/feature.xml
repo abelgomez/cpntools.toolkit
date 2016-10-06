@@ -16,7 +16,8 @@
       provider-name="Abel Gómez">
 
    <description url="https://github.com/SOM-Research/cpntools.toolkit">
-      Plug-ins supporting the development of tools that rely on the CPN Tools toolkit.
+      Plug-ins supporting the development of tools that rely on the
+CPN Tools toolkit. Depends on EMF SDK.
    </description>
 
    <copyright url="https://github.com/SOM-Research/cpntools.toolkit">
@@ -120,6 +121,7 @@ This Agreement is governed by the laws of the State of New York and the intellec
    <requires>
       <import plugin="org.junit" version="4.12.0" match="greaterOrEqual"/>
       <import plugin="io.github.abelgomez.cpntools.io" version="0.1.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.emf.sdk" version="2.12.0.v20160526-0356"/>
    </requires>
 
    <plugin

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="CPN Tools Toolkit" url="http://som-research.github.io/cpntools.toolkit/updates/">
+   <description name="CPN Tools Toolkit" url="http://abelgomez.github.io/cpntools.toolkit/updates/">
       This repository contains the necessary plug-ins to create CPN Tools files from EMF. In addition, it provides capabilities to layout and serialize the EMF-compatible Petri nets into the &quot;normative&quot; CPN Tools XML format.
    </description>
    <feature url="features/io.github.abelgomez.cpntools.feature_0.1.0.201610061540.jar" id="io.github.abelgomez.cpntools.feature" version="0.1.0.201610061540">

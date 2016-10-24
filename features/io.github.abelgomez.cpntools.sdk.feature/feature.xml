@@ -15,12 +15,12 @@
       version="0.1.0.qualifier"
       provider-name="Abel Gómez">
 
-   <description url="https://github.com/SOM-Research/cpntools.toolkit">
+   <description url="https://github.com/abelgomez/cpntools.toolkit">
       Plug-ins supporting the development of tools that rely on the
 CPN Tools toolkit. Depends on EMF SDK.
    </description>
 
-   <copyright url="https://github.com/SOM-Research/cpntools.toolkit">
+   <copyright url="https://github.com/abelgomez/cpntools.toolkit">
       Abel Gómez Copyright (c) 2016
    </copyright>
 

@@ -4,7 +4,7 @@ This repository contains the necessary plug-ins to create CPN Tools files from E
 
 ## Installing the *CPN Tools toolkit*
 
-In Eclipse, go to `Help -> Install New Software...` and use https://som-research.github.io/cpntools.toolkit/updates/ as the URL for the update site.
+In Eclipse, go to `Help -> Install New Software...` and use https://abelgomez.github.io/cpntools.toolkit/updates/ as the URL for the update site.
 
 The *CPN Tools toolkit* requires [Eclipse Neon](https://eclipse.org/neon/) (4.6) or higher. 
 

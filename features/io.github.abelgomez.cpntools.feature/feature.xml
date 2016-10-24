@@ -15,11 +15,11 @@
       version="0.1.0.qualifier"
       provider-name="Abel Gómez">
 
-   <description url="https://github.com/SOM-Research/cpntools.toolkit">
+   <description url="https://github.com/abelgomez/cpntools.toolkit">
       Plug-ins supporting Petri nets conforming to the CPN Tools tool.
    </description>
 
-   <copyright url="https://github.com/SOM-Research/cpntools.toolkit">
+   <copyright url="https://github.com/abelgomez/cpntools.toolkit">
       Abel Gómez Copyright (c) 2016
    </copyright>
 

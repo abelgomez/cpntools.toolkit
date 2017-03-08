@@ -18,6 +18,7 @@ import org.junit.Test;
 
 import io.github.abelgomez.cpntools.Annot;
 import io.github.abelgomez.cpntools.Arc;
+import io.github.abelgomez.cpntools.Binder;
 import io.github.abelgomez.cpntools.Cpnet;
 import io.github.abelgomez.cpntools.CpntoolsFactory;
 import io.github.abelgomez.cpntools.Enumerated;
@@ -53,13 +54,15 @@ public class CpnToolsBuilderTest {
 		Cpnet net = CpntoolsFactory.eINSTANCE.createCpnet();
 		Page page = CpntoolsFactory.eINSTANCE.createPage();
 		Globbox globbox = CpntoolsFactory.eINSTANCE.createGlobbox();
+		Binder binder = CpntoolsFactory.eINSTANCE.createBinder();
 		page.setName("Page");
-		page.setPosx(150);
-		page.setPosy(30);
-		page.setWidth(500);
-		page.setHeight(500);
-		net.setPage(page);
+		binder.setPosx(150);
+		binder.setPosy(30);
+		binder.setWidth(500);
+		binder.setHeight(500);
+		binder.getPages().add(page);
 		net.setGlobbox(globbox);
+		net.setBinder(binder);
 
 		Enumerated enumerated = CpntoolsFactory.eINSTANCE.createEnumerated();
 		globbox.getDeclarations().add(enumerated);

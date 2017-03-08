@@ -30,13 +30,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link io.github.abelgomez.cpntools.Page#getPlaces <em>Places</em>}</li>
  *   <li>{@link io.github.abelgomez.cpntools.Page#getAuxiliarys <em>Auxiliarys</em>}</li>
  *   <li>{@link io.github.abelgomez.cpntools.Page#getName <em>Name</em>}</li>
- *   <li>{@link io.github.abelgomez.cpntools.Page#getCpnet <em>Cpnet</em>}</li>
  *   <li>{@link io.github.abelgomez.cpntools.Page#getTranss <em>Transs</em>}</li>
  *   <li>{@link io.github.abelgomez.cpntools.Page#getArcs <em>Arcs</em>}</li>
- *   <li>{@link io.github.abelgomez.cpntools.Page#getPosx <em>Posx</em>}</li>
- *   <li>{@link io.github.abelgomez.cpntools.Page#getPosy <em>Posy</em>}</li>
- *   <li>{@link io.github.abelgomez.cpntools.Page#getWidth <em>Width</em>}</li>
- *   <li>{@link io.github.abelgomez.cpntools.Page#getHeight <em>Height</em>}</li>
+ *   <li>{@link io.github.abelgomez.cpntools.Page#getBinder <em>Binder</em>}</li>
  * </ul>
  *
  * @see io.github.abelgomez.cpntools.CpntoolsPackage#getPage()
@@ -125,34 +121,6 @@ public interface Page extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Cpnet</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link io.github.abelgomez.cpntools.Cpnet#getPage <em>Page</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cpnet</em>' container reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cpnet</em>' container reference.
-	 * @see #setCpnet(Cpnet)
-	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getPage_Cpnet()
-	 * @see io.github.abelgomez.cpntools.Cpnet#getPage
-	 * @model opposite="page" transient="false"
-	 * @generated
-	 */
-	Cpnet getCpnet();
-
-	/**
-	 * Sets the value of the '{@link io.github.abelgomez.cpntools.Page#getCpnet <em>Cpnet</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cpnet</em>' container reference.
-	 * @see #getCpnet()
-	 * @generated
-	 */
-	void setCpnet(Cpnet value);
-
-	/**
 	 * Returns the value of the '<em><b>Transs</b></em>' containment reference list.
 	 * The list contents are of type {@link io.github.abelgomez.cpntools.Trans}.
 	 * It is bidirectional and its opposite is '{@link io.github.abelgomez.cpntools.Trans#getPage <em>Page</em>}'.
@@ -189,108 +157,32 @@ public interface Page extends EObject {
 	EList<Arc> getArcs();
 
 	/**
-	 * Returns the value of the '<em><b>Posx</b></em>' attribute.
+	 * Returns the value of the '<em><b>Binder</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link io.github.abelgomez.cpntools.Binder#getPages <em>Pages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Posx</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Binder</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Posx</em>' attribute.
-	 * @see #setPosx(int)
-	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getPage_Posx()
-	 * @model
+	 * @return the value of the '<em>Binder</em>' container reference.
+	 * @see #setBinder(Binder)
+	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getPage_Binder()
+	 * @see io.github.abelgomez.cpntools.Binder#getPages
+	 * @model opposite="pages" transient="false"
 	 * @generated
 	 */
-	int getPosx();
+	Binder getBinder();
 
 	/**
-	 * Sets the value of the '{@link io.github.abelgomez.cpntools.Page#getPosx <em>Posx</em>}' attribute.
+	 * Sets the value of the '{@link io.github.abelgomez.cpntools.Page#getBinder <em>Binder</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Posx</em>' attribute.
-	 * @see #getPosx()
+	 * @param value the new value of the '<em>Binder</em>' container reference.
+	 * @see #getBinder()
 	 * @generated
 	 */
-	void setPosx(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Posy</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Posy</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Posy</em>' attribute.
-	 * @see #setPosy(int)
-	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getPage_Posy()
-	 * @model
-	 * @generated
-	 */
-	int getPosy();
-
-	/**
-	 * Sets the value of the '{@link io.github.abelgomez.cpntools.Page#getPosy <em>Posy</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Posy</em>' attribute.
-	 * @see #getPosy()
-	 * @generated
-	 */
-	void setPosy(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Width</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Width</em>' attribute.
-	 * @see #setWidth(int)
-	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getPage_Width()
-	 * @model
-	 * @generated
-	 */
-	int getWidth();
-
-	/**
-	 * Sets the value of the '{@link io.github.abelgomez.cpntools.Page#getWidth <em>Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Width</em>' attribute.
-	 * @see #getWidth()
-	 * @generated
-	 */
-	void setWidth(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Height</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Height</em>' attribute.
-	 * @see #setHeight(int)
-	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getPage_Height()
-	 * @model
-	 * @generated
-	 */
-	int getHeight();
-
-	/**
-	 * Sets the value of the '{@link io.github.abelgomez.cpntools.Page#getHeight <em>Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Height</em>' attribute.
-	 * @see #getHeight()
-	 * @generated
-	 */
-	void setHeight(int value);
+	void setBinder(Binder value);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -303,7 +195,7 @@ public interface Page extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='int width = new Float(getWidth() * 0.9).intValue();\r\nint height = new Float(getHeight() * 0.9).intValue();\r\nlayout(width, height, 5000);'"
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='int width = new Float(getBinder().getWidth() * 0.9).intValue();\r\nint height = new Float(getBinder().getHeight() * 0.9).intValue();\r\nlayout(width, height, 5000);'"
 	 * @generated
 	 */
 	void layout();

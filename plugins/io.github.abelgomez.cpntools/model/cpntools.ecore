@@ -6,8 +6,8 @@
         upperBound="-1" eType="#//Fusion" containment="true" eOpposite="#//Fusion/cpnet"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="globbox" ordered="false"
         eType="#//Globbox" containment="true" eOpposite="#//Globbox/cpnet"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="page" eType="#//Page" containment="true"
-        eOpposite="#//Page/cpnet"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="binder" eType="#//Binder"
+        containment="true" eOpposite="#//Binder/cpnet"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Page">
     <eOperations name="layout">
@@ -20,7 +20,7 @@
     </eOperations>
     <eOperations name="layout">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="int width = new Float(getWidth() * 0.9).intValue();&#xD;&#xA;int height = new Float(getHeight() * 0.9).intValue();&#xD;&#xA;layout(width, height, 5000);"/>
+        <details key="body" value="int width = new Float(getBinder().getWidth() * 0.9).intValue();&#xD;&#xA;int height = new Float(getBinder().getHeight() * 0.9).intValue();&#xD;&#xA;layout(width, height, 5000);"/>
       </eAnnotations>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="group" ordered="false"
@@ -30,16 +30,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="auxiliarys" ordered="false"
         upperBound="-1" eType="#//Auxiliary" containment="true" eOpposite="#//Auxiliary/page"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cpnet" eType="#//Cpnet"
-        eOpposite="#//Cpnet/page"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transs" upperBound="-1"
         eType="#//Trans" containment="true" eOpposite="#//Trans/page"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="arcs" upperBound="-1" eType="#//Arc"
         containment="true" eOpposite="#//Arc/page"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posx" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="binder" eType="#//Binder"
+        eOpposite="#//Binder/pages"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Group">
     <eStructuralFeatures xsi:type="ecore:EReference" name="groupElms" ordered="false"
@@ -254,5 +250,15 @@
     <eLiterals name="undefined"/>
     <eLiterals name="PtoT" value="1"/>
     <eLiterals name="TtoP" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Binder">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="posx" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cpnet" eType="#//Cpnet"
+        eOpposite="#//Cpnet/binder"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pages" upperBound="-1"
+        eType="#//Page" containment="true" eOpposite="#//Page/binder"/>
   </eClassifiers>
 </ecore:EPackage>

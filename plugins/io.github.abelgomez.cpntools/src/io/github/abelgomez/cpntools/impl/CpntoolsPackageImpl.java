@@ -17,6 +17,7 @@ import io.github.abelgomez.cpntools.AuxBox;
 import io.github.abelgomez.cpntools.AuxEllipse;
 import io.github.abelgomez.cpntools.AuxText;
 import io.github.abelgomez.cpntools.Auxiliary;
+import io.github.abelgomez.cpntools.Binder;
 import io.github.abelgomez.cpntools.Block;
 import io.github.abelgomez.cpntools.ColorSet;
 import io.github.abelgomez.cpntools.CompoundColorSet;
@@ -368,6 +369,13 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass binderEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum orientationEEnum = null;
 
 	/**
@@ -463,7 +471,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCpnet_Page() {
+	public EReference getCpnet_Binder() {
 		return (EReference)cpnetEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -517,7 +525,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPage_Cpnet() {
+	public EReference getPage_Transs() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -526,7 +534,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPage_Transs() {
+	public EReference getPage_Arcs() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -535,44 +543,8 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPage_Arcs() {
+	public EReference getPage_Binder() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPage_Posx() {
-		return (EAttribute)pageEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPage_Posy() {
-		return (EAttribute)pageEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPage_Width() {
-		return (EAttribute)pageEClass.getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPage_Height() {
-		return (EAttribute)pageEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -1660,6 +1632,69 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getBinder() {
+		return binderEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBinder_Posy() {
+		return (EAttribute)binderEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBinder_Posx() {
+		return (EAttribute)binderEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBinder_Width() {
+		return (EAttribute)binderEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBinder_Height() {
+		return (EAttribute)binderEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBinder_Cpnet() {
+		return (EReference)binderEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBinder_Pages() {
+		return (EReference)binderEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getOrientation() {
 		return orientationEEnum;
 	}
@@ -1695,20 +1730,16 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 		cpnetEClass = createEClass(CPNET);
 		createEReference(cpnetEClass, CPNET__FUSIONS);
 		createEReference(cpnetEClass, CPNET__GLOBBOX);
-		createEReference(cpnetEClass, CPNET__PAGE);
+		createEReference(cpnetEClass, CPNET__BINDER);
 
 		pageEClass = createEClass(PAGE);
 		createEReference(pageEClass, PAGE__GROUP);
 		createEReference(pageEClass, PAGE__PLACES);
 		createEReference(pageEClass, PAGE__AUXILIARYS);
 		createEAttribute(pageEClass, PAGE__NAME);
-		createEReference(pageEClass, PAGE__CPNET);
 		createEReference(pageEClass, PAGE__TRANSS);
 		createEReference(pageEClass, PAGE__ARCS);
-		createEAttribute(pageEClass, PAGE__POSX);
-		createEAttribute(pageEClass, PAGE__POSY);
-		createEAttribute(pageEClass, PAGE__WIDTH);
-		createEAttribute(pageEClass, PAGE__HEIGHT);
+		createEReference(pageEClass, PAGE__BINDER);
 		createEOperation(pageEClass, PAGE___LAYOUT__INTEGER_INTEGER_INTEGER);
 		createEOperation(pageEClass, PAGE___LAYOUT);
 
@@ -1870,6 +1901,14 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 
 		aliasEClass = createEClass(ALIAS);
 
+		binderEClass = createEClass(BINDER);
+		createEAttribute(binderEClass, BINDER__POSY);
+		createEAttribute(binderEClass, BINDER__POSX);
+		createEAttribute(binderEClass, BINDER__WIDTH);
+		createEAttribute(binderEClass, BINDER__HEIGHT);
+		createEReference(binderEClass, BINDER__CPNET);
+		createEReference(binderEClass, BINDER__PAGES);
+
 		// Create enums
 		orientationEEnum = createEEnum(ORIENTATION);
 	}
@@ -1942,20 +1981,16 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 		initEClass(cpnetEClass, Cpnet.class, "Cpnet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCpnet_Fusions(), this.getFusion(), this.getFusion_Cpnet(), "fusions", null, 0, -1, Cpnet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCpnet_Globbox(), this.getGlobbox(), this.getGlobbox_Cpnet(), "globbox", null, 0, 1, Cpnet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getCpnet_Page(), this.getPage(), this.getPage_Cpnet(), "page", null, 0, 1, Cpnet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCpnet_Binder(), this.getBinder(), this.getBinder_Cpnet(), "binder", null, 0, 1, Cpnet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPage_Group(), this.getGroup(), this.getGroup_Page(), "group", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getPage_Places(), this.getPlace(), this.getPlace_Page(), "places", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getPage_Auxiliarys(), this.getAuxiliary(), this.getAuxiliary_Page(), "auxiliarys", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getPage_Cpnet(), this.getCpnet(), this.getCpnet_Page(), "cpnet", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPage_Transs(), this.getTrans(), this.getTrans_Page(), "transs", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPage_Arcs(), this.getArc(), this.getArc_Page(), "arcs", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPage_Posx(), ecorePackage.getEInt(), "posx", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPage_Posy(), ecorePackage.getEInt(), "posy", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPage_Width(), ecorePackage.getEInt(), "width", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPage_Height(), ecorePackage.getEInt(), "height", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPage_Binder(), this.getBinder(), this.getBinder_Pages(), "binder", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getPage__Layout__Integer_Integer_Integer(), null, "layout", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEIntegerObject(), "width", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -2121,6 +2156,14 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 		initEClass(subsetEClass, Subset.class, "Subset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(aliasEClass, Alias.class, "Alias", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(binderEClass, Binder.class, "Binder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBinder_Posy(), ecorePackage.getEInt(), "posy", null, 0, 1, Binder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBinder_Posx(), ecorePackage.getEInt(), "posx", null, 0, 1, Binder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBinder_Width(), ecorePackage.getEInt(), "width", null, 0, 1, Binder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBinder_Height(), ecorePackage.getEInt(), "height", null, 0, 1, Binder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBinder_Cpnet(), this.getCpnet(), this.getCpnet_Binder(), "cpnet", null, 0, 1, Binder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBinder_Pages(), this.getPage(), this.getPage_Binder(), "pages", null, 0, -1, Binder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(orientationEEnum, Orientation.class, "Orientation");

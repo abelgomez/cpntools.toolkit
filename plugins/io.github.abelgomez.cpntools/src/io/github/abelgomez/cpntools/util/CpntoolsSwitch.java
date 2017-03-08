@@ -17,6 +17,7 @@ import io.github.abelgomez.cpntools.AuxBox;
 import io.github.abelgomez.cpntools.AuxEllipse;
 import io.github.abelgomez.cpntools.AuxText;
 import io.github.abelgomez.cpntools.Auxiliary;
+import io.github.abelgomez.cpntools.Binder;
 import io.github.abelgomez.cpntools.Block;
 import io.github.abelgomez.cpntools.ColorSet;
 import io.github.abelgomez.cpntools.CompoundColorSet;
@@ -432,6 +433,12 @@ public class CpntoolsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseCompoundColorSet(alias);
 				if (result == null) result = caseColorSet(alias);
 				if (result == null) result = caseDeclaration(alias);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CpntoolsPackage.BINDER: {
+				Binder binder = (Binder)theEObject;
+				T result = caseBinder(binder);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1066,6 +1073,21 @@ public class CpntoolsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAlias(Alias object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Binder</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Binder</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBinder(Binder object) {
 		return null;
 	}
 

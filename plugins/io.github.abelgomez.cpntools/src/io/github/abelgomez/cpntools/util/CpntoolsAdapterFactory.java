@@ -17,6 +17,7 @@ import io.github.abelgomez.cpntools.AuxBox;
 import io.github.abelgomez.cpntools.AuxEllipse;
 import io.github.abelgomez.cpntools.AuxText;
 import io.github.abelgomez.cpntools.Auxiliary;
+import io.github.abelgomez.cpntools.Binder;
 import io.github.abelgomez.cpntools.Block;
 import io.github.abelgomez.cpntools.ColorSet;
 import io.github.abelgomez.cpntools.CompoundColorSet;
@@ -281,6 +282,10 @@ public class CpntoolsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseAlias(Alias object) {
 				return createAliasAdapter();
+			}
+			@Override
+			public Adapter caseBinder(Binder object) {
+				return createBinderAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -887,6 +892,20 @@ public class CpntoolsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAliasAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link io.github.abelgomez.cpntools.Binder <em>Binder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see io.github.abelgomez.cpntools.Binder
+	 * @generated
+	 */
+	public Adapter createBinderAdapter() {
 		return null;
 	}
 

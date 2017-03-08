@@ -11,8 +11,6 @@
 package io.github.abelgomez.cpntools.impl;
 
 import java.awt.Dimension;
-import java.lang.Integer;
-import java.lang.String;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.concurrent.ThreadLocalRandom;
@@ -33,7 +31,7 @@ import edu.uci.ics.jung.graph.DirectedSparseGraph;
 import edu.uci.ics.jung.graph.util.Pair;
 import io.github.abelgomez.cpntools.Arc;
 import io.github.abelgomez.cpntools.Auxiliary;
-import io.github.abelgomez.cpntools.Cpnet;
+import io.github.abelgomez.cpntools.Binder;
 import io.github.abelgomez.cpntools.CpntoolsPackage;
 import io.github.abelgomez.cpntools.DiagramElement;
 import io.github.abelgomez.cpntools.Group;
@@ -54,13 +52,9 @@ import io.github.abelgomez.cpntools.Trans;
  *   <li>{@link io.github.abelgomez.cpntools.impl.PageImpl#getPlaces <em>Places</em>}</li>
  *   <li>{@link io.github.abelgomez.cpntools.impl.PageImpl#getAuxiliarys <em>Auxiliarys</em>}</li>
  *   <li>{@link io.github.abelgomez.cpntools.impl.PageImpl#getName <em>Name</em>}</li>
- *   <li>{@link io.github.abelgomez.cpntools.impl.PageImpl#getCpnet <em>Cpnet</em>}</li>
  *   <li>{@link io.github.abelgomez.cpntools.impl.PageImpl#getTranss <em>Transs</em>}</li>
  *   <li>{@link io.github.abelgomez.cpntools.impl.PageImpl#getArcs <em>Arcs</em>}</li>
- *   <li>{@link io.github.abelgomez.cpntools.impl.PageImpl#getPosx <em>Posx</em>}</li>
- *   <li>{@link io.github.abelgomez.cpntools.impl.PageImpl#getPosy <em>Posy</em>}</li>
- *   <li>{@link io.github.abelgomez.cpntools.impl.PageImpl#getWidth <em>Width</em>}</li>
- *   <li>{@link io.github.abelgomez.cpntools.impl.PageImpl#getHeight <em>Height</em>}</li>
+ *   <li>{@link io.github.abelgomez.cpntools.impl.PageImpl#getBinder <em>Binder</em>}</li>
  * </ul>
  *
  * @generated
@@ -135,86 +129,6 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * @ordered
 	 */
 	protected EList<Arc> arcs;
-
-	/**
-	 * The default value of the '{@link #getPosx() <em>Posx</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPosx()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int POSX_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getPosx() <em>Posx</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPosx()
-	 * @generated
-	 * @ordered
-	 */
-	protected int posx = POSX_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPosy() <em>Posy</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPosy()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int POSY_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getPosy() <em>Posy</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPosy()
-	 * @generated
-	 * @ordered
-	 */
-	protected int posy = POSY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getWidth() <em>Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getWidth()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int WIDTH_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getWidth()
-	 * @generated
-	 * @ordered
-	 */
-	protected int width = WIDTH_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getHeight() <em>Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHeight()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int HEIGHT_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHeight()
-	 * @generated
-	 * @ordered
-	 */
-	protected int height = HEIGHT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -297,47 +211,6 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Cpnet getCpnet() {
-		if (eContainerFeatureID() != CpntoolsPackage.PAGE__CPNET) return null;
-		return (Cpnet)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCpnet(Cpnet newCpnet, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newCpnet, CpntoolsPackage.PAGE__CPNET, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCpnet(Cpnet newCpnet) {
-		if (newCpnet != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.PAGE__CPNET && newCpnet != null)) {
-			if (EcoreUtil.isAncestor(this, newCpnet))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newCpnet != null)
-				msgs = ((InternalEObject)newCpnet).eInverseAdd(this, CpntoolsPackage.CPNET__PAGE, Cpnet.class, msgs);
-			msgs = basicSetCpnet(newCpnet, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CpntoolsPackage.PAGE__CPNET, newCpnet, newCpnet));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Trans> getTranss() {
 		if (transs == null) {
 			transs = new EObjectContainmentWithInverseEList<Trans>(Trans.class, this, CpntoolsPackage.PAGE__TRANSS, CpntoolsPackage.TRANS__PAGE);
@@ -362,8 +235,9 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getPosx() {
-		return posx;
+	public Binder getBinder() {
+		if (eContainerFeatureID() != CpntoolsPackage.PAGE__BINDER) return null;
+		return (Binder)eInternalContainer();
 	}
 
 	/**
@@ -371,11 +245,9 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPosx(int newPosx) {
-		int oldPosx = posx;
-		posx = newPosx;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CpntoolsPackage.PAGE__POSX, oldPosx, posx));
+	public NotificationChain basicSetBinder(Binder newBinder, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newBinder, CpntoolsPackage.PAGE__BINDER, msgs);
+		return msgs;
 	}
 
 	/**
@@ -383,62 +255,20 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getPosy() {
-		return posy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPosy(int newPosy) {
-		int oldPosy = posy;
-		posy = newPosy;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CpntoolsPackage.PAGE__POSY, oldPosy, posy));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getWidth() {
-		return width;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setWidth(int newWidth) {
-		int oldWidth = width;
-		width = newWidth;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CpntoolsPackage.PAGE__WIDTH, oldWidth, width));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getHeight() {
-		return height;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHeight(int newHeight) {
-		int oldHeight = height;
-		height = newHeight;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CpntoolsPackage.PAGE__HEIGHT, oldHeight, height));
+	public void setBinder(Binder newBinder) {
+		if (newBinder != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.PAGE__BINDER && newBinder != null)) {
+			if (EcoreUtil.isAncestor(this, newBinder))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newBinder != null)
+				msgs = ((InternalEObject)newBinder).eInverseAdd(this, CpntoolsPackage.BINDER__PAGES, Binder.class, msgs);
+			msgs = basicSetBinder(newBinder, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CpntoolsPackage.PAGE__BINDER, newBinder, newBinder));
 	}
 
 	/**
@@ -519,8 +349,8 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * @generated
 	 */
 	public void layout() {
-		int width = new Float(getWidth() * 0.9).intValue();
-		int height = new Float(getHeight() * 0.9).intValue();
+		int width = new Float(getBinder().getWidth() * 0.9).intValue();
+		int height = new Float(getBinder().getHeight() * 0.9).intValue();
 		layout(width, height, 5000);
 	}
 
@@ -539,14 +369,14 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPlaces()).basicAdd(otherEnd, msgs);
 			case CpntoolsPackage.PAGE__AUXILIARYS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAuxiliarys()).basicAdd(otherEnd, msgs);
-			case CpntoolsPackage.PAGE__CPNET:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetCpnet((Cpnet)otherEnd, msgs);
 			case CpntoolsPackage.PAGE__TRANSS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTranss()).basicAdd(otherEnd, msgs);
 			case CpntoolsPackage.PAGE__ARCS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getArcs()).basicAdd(otherEnd, msgs);
+			case CpntoolsPackage.PAGE__BINDER:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetBinder((Binder)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -565,12 +395,12 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 				return ((InternalEList<?>)getPlaces()).basicRemove(otherEnd, msgs);
 			case CpntoolsPackage.PAGE__AUXILIARYS:
 				return ((InternalEList<?>)getAuxiliarys()).basicRemove(otherEnd, msgs);
-			case CpntoolsPackage.PAGE__CPNET:
-				return basicSetCpnet(null, msgs);
 			case CpntoolsPackage.PAGE__TRANSS:
 				return ((InternalEList<?>)getTranss()).basicRemove(otherEnd, msgs);
 			case CpntoolsPackage.PAGE__ARCS:
 				return ((InternalEList<?>)getArcs()).basicRemove(otherEnd, msgs);
+			case CpntoolsPackage.PAGE__BINDER:
+				return basicSetBinder(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -583,8 +413,8 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-			case CpntoolsPackage.PAGE__CPNET:
-				return eInternalContainer().eInverseRemove(this, CpntoolsPackage.CPNET__PAGE, Cpnet.class, msgs);
+			case CpntoolsPackage.PAGE__BINDER:
+				return eInternalContainer().eInverseRemove(this, CpntoolsPackage.BINDER__PAGES, Binder.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -605,20 +435,12 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 				return getAuxiliarys();
 			case CpntoolsPackage.PAGE__NAME:
 				return getName();
-			case CpntoolsPackage.PAGE__CPNET:
-				return getCpnet();
 			case CpntoolsPackage.PAGE__TRANSS:
 				return getTranss();
 			case CpntoolsPackage.PAGE__ARCS:
 				return getArcs();
-			case CpntoolsPackage.PAGE__POSX:
-				return getPosx();
-			case CpntoolsPackage.PAGE__POSY:
-				return getPosy();
-			case CpntoolsPackage.PAGE__WIDTH:
-				return getWidth();
-			case CpntoolsPackage.PAGE__HEIGHT:
-				return getHeight();
+			case CpntoolsPackage.PAGE__BINDER:
+				return getBinder();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -647,9 +469,6 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 			case CpntoolsPackage.PAGE__NAME:
 				setName((String)newValue);
 				return;
-			case CpntoolsPackage.PAGE__CPNET:
-				setCpnet((Cpnet)newValue);
-				return;
 			case CpntoolsPackage.PAGE__TRANSS:
 				getTranss().clear();
 				getTranss().addAll((Collection<? extends Trans>)newValue);
@@ -658,17 +477,8 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 				getArcs().clear();
 				getArcs().addAll((Collection<? extends Arc>)newValue);
 				return;
-			case CpntoolsPackage.PAGE__POSX:
-				setPosx((Integer)newValue);
-				return;
-			case CpntoolsPackage.PAGE__POSY:
-				setPosy((Integer)newValue);
-				return;
-			case CpntoolsPackage.PAGE__WIDTH:
-				setWidth((Integer)newValue);
-				return;
-			case CpntoolsPackage.PAGE__HEIGHT:
-				setHeight((Integer)newValue);
+			case CpntoolsPackage.PAGE__BINDER:
+				setBinder((Binder)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -694,26 +504,14 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 			case CpntoolsPackage.PAGE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case CpntoolsPackage.PAGE__CPNET:
-				setCpnet((Cpnet)null);
-				return;
 			case CpntoolsPackage.PAGE__TRANSS:
 				getTranss().clear();
 				return;
 			case CpntoolsPackage.PAGE__ARCS:
 				getArcs().clear();
 				return;
-			case CpntoolsPackage.PAGE__POSX:
-				setPosx(POSX_EDEFAULT);
-				return;
-			case CpntoolsPackage.PAGE__POSY:
-				setPosy(POSY_EDEFAULT);
-				return;
-			case CpntoolsPackage.PAGE__WIDTH:
-				setWidth(WIDTH_EDEFAULT);
-				return;
-			case CpntoolsPackage.PAGE__HEIGHT:
-				setHeight(HEIGHT_EDEFAULT);
+			case CpntoolsPackage.PAGE__BINDER:
+				setBinder((Binder)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -735,20 +533,12 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 				return auxiliarys != null && !auxiliarys.isEmpty();
 			case CpntoolsPackage.PAGE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case CpntoolsPackage.PAGE__CPNET:
-				return getCpnet() != null;
 			case CpntoolsPackage.PAGE__TRANSS:
 				return transs != null && !transs.isEmpty();
 			case CpntoolsPackage.PAGE__ARCS:
 				return arcs != null && !arcs.isEmpty();
-			case CpntoolsPackage.PAGE__POSX:
-				return posx != POSX_EDEFAULT;
-			case CpntoolsPackage.PAGE__POSY:
-				return posy != POSY_EDEFAULT;
-			case CpntoolsPackage.PAGE__WIDTH:
-				return width != WIDTH_EDEFAULT;
-			case CpntoolsPackage.PAGE__HEIGHT:
-				return height != HEIGHT_EDEFAULT;
+			case CpntoolsPackage.PAGE__BINDER:
+				return getBinder() != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -783,14 +573,6 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", posx: ");
-		result.append(posx);
-		result.append(", posy: ");
-		result.append(posy);
-		result.append(", width: ");
-		result.append(width);
-		result.append(", height: ");
-		result.append(height);
 		result.append(')');
 		return result.toString();
 	}

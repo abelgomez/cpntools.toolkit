@@ -16,6 +16,7 @@ import io.github.abelgomez.cpntools.Arc;
 import io.github.abelgomez.cpntools.AuxBox;
 import io.github.abelgomez.cpntools.AuxEllipse;
 import io.github.abelgomez.cpntools.AuxText;
+import io.github.abelgomez.cpntools.Binder;
 import io.github.abelgomez.cpntools.Block;
 import io.github.abelgomez.cpntools.Cpnet;
 import io.github.abelgomez.cpntools.CpntoolsFactory;
@@ -136,6 +137,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 			case CpntoolsPackage.UNION: return createUnion();
 			case CpntoolsPackage.SUBSET: return createSubset();
 			case CpntoolsPackage.ALIAS: return createAlias();
+			case CpntoolsPackage.BINDER: return createBinder();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -529,6 +531,16 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	public Alias createAlias() {
 		AliasImpl alias = new AliasImpl();
 		return alias;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Binder createBinder() {
+		BinderImpl binder = new BinderImpl();
+		return binder;
 	}
 
 	/**

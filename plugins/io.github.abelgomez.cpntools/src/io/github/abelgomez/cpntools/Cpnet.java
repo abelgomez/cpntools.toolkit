@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link io.github.abelgomez.cpntools.Cpnet#getFusions <em>Fusions</em>}</li>
  *   <li>{@link io.github.abelgomez.cpntools.Cpnet#getGlobbox <em>Globbox</em>}</li>
- *   <li>{@link io.github.abelgomez.cpntools.Cpnet#getPage <em>Page</em>}</li>
+ *   <li>{@link io.github.abelgomez.cpntools.Cpnet#getBinder <em>Binder</em>}</li>
  * </ul>
  *
  * @see io.github.abelgomez.cpntools.CpntoolsPackage#getCpnet()
@@ -80,31 +80,31 @@ public interface Cpnet extends EObject {
 	void setGlobbox(Globbox value);
 
 	/**
-	 * Returns the value of the '<em><b>Page</b></em>' containment reference.
-	 * It is bidirectional and its opposite is '{@link io.github.abelgomez.cpntools.Page#getCpnet <em>Cpnet</em>}'.
+	 * Returns the value of the '<em><b>Binder</b></em>' containment reference.
+	 * It is bidirectional and its opposite is '{@link io.github.abelgomez.cpntools.Binder#getCpnet <em>Cpnet</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Page</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Binder</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Page</em>' containment reference.
-	 * @see #setPage(Page)
-	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getCpnet_Page()
-	 * @see io.github.abelgomez.cpntools.Page#getCpnet
+	 * @return the value of the '<em>Binder</em>' containment reference.
+	 * @see #setBinder(Binder)
+	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getCpnet_Binder()
+	 * @see io.github.abelgomez.cpntools.Binder#getCpnet
 	 * @model opposite="cpnet" containment="true"
 	 * @generated
 	 */
-	Page getPage();
+	Binder getBinder();
 
 	/**
-	 * Sets the value of the '{@link io.github.abelgomez.cpntools.Cpnet#getPage <em>Page</em>}' containment reference.
+	 * Sets the value of the '{@link io.github.abelgomez.cpntools.Cpnet#getBinder <em>Binder</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Page</em>' containment reference.
-	 * @see #getPage()
+	 * @param value the new value of the '<em>Binder</em>' containment reference.
+	 * @see #getBinder()
 	 * @generated
 	 */
-	void setPage(Page value);
+	void setBinder(Binder value);
 
 } // Cpnet

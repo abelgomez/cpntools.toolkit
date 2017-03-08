@@ -10,12 +10,11 @@
  *******************************************************************************/
 package io.github.abelgomez.cpntools.impl;
 
+import io.github.abelgomez.cpntools.Binder;
 import io.github.abelgomez.cpntools.Cpnet;
 import io.github.abelgomez.cpntools.CpntoolsPackage;
 import io.github.abelgomez.cpntools.Fusion;
 import io.github.abelgomez.cpntools.Globbox;
-import io.github.abelgomez.cpntools.Page;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -42,7 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link io.github.abelgomez.cpntools.impl.CpnetImpl#getFusions <em>Fusions</em>}</li>
  *   <li>{@link io.github.abelgomez.cpntools.impl.CpnetImpl#getGlobbox <em>Globbox</em>}</li>
- *   <li>{@link io.github.abelgomez.cpntools.impl.CpnetImpl#getPage <em>Page</em>}</li>
+ *   <li>{@link io.github.abelgomez.cpntools.impl.CpnetImpl#getBinder <em>Binder</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,14 +68,14 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 	protected Globbox globbox;
 
 	/**
-	 * The cached value of the '{@link #getPage() <em>Page</em>}' containment reference.
+	 * The cached value of the '{@link #getBinder() <em>Binder</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPage()
+	 * @see #getBinder()
 	 * @generated
 	 * @ordered
 	 */
-	protected Page page;
+	protected Binder binder;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -157,8 +156,8 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Page getPage() {
-		return page;
+	public Binder getBinder() {
+		return binder;
 	}
 
 	/**
@@ -166,11 +165,11 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPage(Page newPage, NotificationChain msgs) {
-		Page oldPage = page;
-		page = newPage;
+	public NotificationChain basicSetBinder(Binder newBinder, NotificationChain msgs) {
+		Binder oldBinder = binder;
+		binder = newBinder;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CpntoolsPackage.CPNET__PAGE, oldPage, newPage);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CpntoolsPackage.CPNET__BINDER, oldBinder, newBinder);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -181,18 +180,18 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPage(Page newPage) {
-		if (newPage != page) {
+	public void setBinder(Binder newBinder) {
+		if (newBinder != binder) {
 			NotificationChain msgs = null;
-			if (page != null)
-				msgs = ((InternalEObject)page).eInverseRemove(this, CpntoolsPackage.PAGE__CPNET, Page.class, msgs);
-			if (newPage != null)
-				msgs = ((InternalEObject)newPage).eInverseAdd(this, CpntoolsPackage.PAGE__CPNET, Page.class, msgs);
-			msgs = basicSetPage(newPage, msgs);
+			if (binder != null)
+				msgs = ((InternalEObject)binder).eInverseRemove(this, CpntoolsPackage.BINDER__CPNET, Binder.class, msgs);
+			if (newBinder != null)
+				msgs = ((InternalEObject)newBinder).eInverseAdd(this, CpntoolsPackage.BINDER__CPNET, Binder.class, msgs);
+			msgs = basicSetBinder(newBinder, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CpntoolsPackage.CPNET__PAGE, newPage, newPage));
+			eNotify(new ENotificationImpl(this, Notification.SET, CpntoolsPackage.CPNET__BINDER, newBinder, newBinder));
 	}
 
 	/**
@@ -210,10 +209,10 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 				if (globbox != null)
 					msgs = ((InternalEObject)globbox).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CpntoolsPackage.CPNET__GLOBBOX, null, msgs);
 				return basicSetGlobbox((Globbox)otherEnd, msgs);
-			case CpntoolsPackage.CPNET__PAGE:
-				if (page != null)
-					msgs = ((InternalEObject)page).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CpntoolsPackage.CPNET__PAGE, null, msgs);
-				return basicSetPage((Page)otherEnd, msgs);
+			case CpntoolsPackage.CPNET__BINDER:
+				if (binder != null)
+					msgs = ((InternalEObject)binder).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CpntoolsPackage.CPNET__BINDER, null, msgs);
+				return basicSetBinder((Binder)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -230,8 +229,8 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 				return ((InternalEList<?>)getFusions()).basicRemove(otherEnd, msgs);
 			case CpntoolsPackage.CPNET__GLOBBOX:
 				return basicSetGlobbox(null, msgs);
-			case CpntoolsPackage.CPNET__PAGE:
-				return basicSetPage(null, msgs);
+			case CpntoolsPackage.CPNET__BINDER:
+				return basicSetBinder(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -248,8 +247,8 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 				return getFusions();
 			case CpntoolsPackage.CPNET__GLOBBOX:
 				return getGlobbox();
-			case CpntoolsPackage.CPNET__PAGE:
-				return getPage();
+			case CpntoolsPackage.CPNET__BINDER:
+				return getBinder();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -270,8 +269,8 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 			case CpntoolsPackage.CPNET__GLOBBOX:
 				setGlobbox((Globbox)newValue);
 				return;
-			case CpntoolsPackage.CPNET__PAGE:
-				setPage((Page)newValue);
+			case CpntoolsPackage.CPNET__BINDER:
+				setBinder((Binder)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -291,8 +290,8 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 			case CpntoolsPackage.CPNET__GLOBBOX:
 				setGlobbox((Globbox)null);
 				return;
-			case CpntoolsPackage.CPNET__PAGE:
-				setPage((Page)null);
+			case CpntoolsPackage.CPNET__BINDER:
+				setBinder((Binder)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -310,8 +309,8 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 				return fusions != null && !fusions.isEmpty();
 			case CpntoolsPackage.CPNET__GLOBBOX:
 				return globbox != null;
-			case CpntoolsPackage.CPNET__PAGE:
-				return page != null;
+			case CpntoolsPackage.CPNET__BINDER:
+				return binder != null;
 		}
 		return super.eIsSet(featureID);
 	}

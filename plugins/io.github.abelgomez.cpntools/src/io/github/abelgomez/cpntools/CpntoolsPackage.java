@@ -97,13 +97,13 @@ public interface CpntoolsPackage extends EPackage {
 	int CPNET__GLOBBOX = 1;
 
 	/**
-	 * The feature id for the '<em><b>Page</b></em>' containment reference.
+	 * The feature id for the '<em><b>Binder</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CPNET__PAGE = 2;
+	int CPNET__BINDER = 2;
 
 	/**
 	 * The number of structural features of the '<em>Cpnet</em>' class.
@@ -170,22 +170,13 @@ public interface CpntoolsPackage extends EPackage {
 	int PAGE__NAME = 3;
 
 	/**
-	 * The feature id for the '<em><b>Cpnet</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAGE__CPNET = 4;
-
-	/**
 	 * The feature id for the '<em><b>Transs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__TRANSS = 5;
+	int PAGE__TRANSS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Arcs</b></em>' containment reference list.
@@ -194,43 +185,16 @@ public interface CpntoolsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__ARCS = 6;
+	int PAGE__ARCS = 5;
 
 	/**
-	 * The feature id for the '<em><b>Posx</b></em>' attribute.
+	 * The feature id for the '<em><b>Binder</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__POSX = 7;
-
-	/**
-	 * The feature id for the '<em><b>Posy</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAGE__POSY = 8;
-
-	/**
-	 * The feature id for the '<em><b>Width</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAGE__WIDTH = 9;
-
-	/**
-	 * The feature id for the '<em><b>Height</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PAGE__HEIGHT = 10;
+	int PAGE__BINDER = 6;
 
 	/**
 	 * The number of structural features of the '<em>Page</em>' class.
@@ -239,7 +203,7 @@ public interface CpntoolsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_FEATURE_COUNT = 11;
+	int PAGE_FEATURE_COUNT = 7;
 
 	/**
 	 * The operation id for the '<em>Layout</em>' operation.
@@ -4233,6 +4197,88 @@ public interface CpntoolsPackage extends EPackage {
 	int ALIAS_OPERATION_COUNT = COMPOUND_COLOR_SET_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link io.github.abelgomez.cpntools.impl.BinderImpl <em>Binder</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.github.abelgomez.cpntools.impl.BinderImpl
+	 * @see io.github.abelgomez.cpntools.impl.CpntoolsPackageImpl#getBinder()
+	 * @generated
+	 */
+	int BINDER = 42;
+
+	/**
+	 * The feature id for the '<em><b>Posy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINDER__POSY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Posx</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINDER__POSX = 1;
+
+	/**
+	 * The feature id for the '<em><b>Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINDER__WIDTH = 2;
+
+	/**
+	 * The feature id for the '<em><b>Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINDER__HEIGHT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Cpnet</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINDER__CPNET = 4;
+
+	/**
+	 * The feature id for the '<em><b>Pages</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINDER__PAGES = 5;
+
+	/**
+	 * The number of structural features of the '<em>Binder</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINDER_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>Binder</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINDER_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link io.github.abelgomez.cpntools.Orientation <em>Orientation</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4240,7 +4286,7 @@ public interface CpntoolsPackage extends EPackage {
 	 * @see io.github.abelgomez.cpntools.impl.CpntoolsPackageImpl#getOrientation()
 	 * @generated
 	 */
-	int ORIENTATION = 42;
+	int ORIENTATION = 43;
 
 
 	/**
@@ -4276,15 +4322,15 @@ public interface CpntoolsPackage extends EPackage {
 	EReference getCpnet_Globbox();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link io.github.abelgomez.cpntools.Cpnet#getPage <em>Page</em>}'.
+	 * Returns the meta object for the containment reference '{@link io.github.abelgomez.cpntools.Cpnet#getBinder <em>Binder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Page</em>'.
-	 * @see io.github.abelgomez.cpntools.Cpnet#getPage()
+	 * @return the meta object for the containment reference '<em>Binder</em>'.
+	 * @see io.github.abelgomez.cpntools.Cpnet#getBinder()
 	 * @see #getCpnet()
 	 * @generated
 	 */
-	EReference getCpnet_Page();
+	EReference getCpnet_Binder();
 
 	/**
 	 * Returns the meta object for class '{@link io.github.abelgomez.cpntools.Page <em>Page</em>}'.
@@ -4341,17 +4387,6 @@ public interface CpntoolsPackage extends EPackage {
 	EAttribute getPage_Name();
 
 	/**
-	 * Returns the meta object for the container reference '{@link io.github.abelgomez.cpntools.Page#getCpnet <em>Cpnet</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Cpnet</em>'.
-	 * @see io.github.abelgomez.cpntools.Page#getCpnet()
-	 * @see #getPage()
-	 * @generated
-	 */
-	EReference getPage_Cpnet();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link io.github.abelgomez.cpntools.Page#getTranss <em>Transs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4374,48 +4409,15 @@ public interface CpntoolsPackage extends EPackage {
 	EReference getPage_Arcs();
 
 	/**
-	 * Returns the meta object for the attribute '{@link io.github.abelgomez.cpntools.Page#getPosx <em>Posx</em>}'.
+	 * Returns the meta object for the container reference '{@link io.github.abelgomez.cpntools.Page#getBinder <em>Binder</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Posx</em>'.
-	 * @see io.github.abelgomez.cpntools.Page#getPosx()
+	 * @return the meta object for the container reference '<em>Binder</em>'.
+	 * @see io.github.abelgomez.cpntools.Page#getBinder()
 	 * @see #getPage()
 	 * @generated
 	 */
-	EAttribute getPage_Posx();
-
-	/**
-	 * Returns the meta object for the attribute '{@link io.github.abelgomez.cpntools.Page#getPosy <em>Posy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Posy</em>'.
-	 * @see io.github.abelgomez.cpntools.Page#getPosy()
-	 * @see #getPage()
-	 * @generated
-	 */
-	EAttribute getPage_Posy();
-
-	/**
-	 * Returns the meta object for the attribute '{@link io.github.abelgomez.cpntools.Page#getWidth <em>Width</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Width</em>'.
-	 * @see io.github.abelgomez.cpntools.Page#getWidth()
-	 * @see #getPage()
-	 * @generated
-	 */
-	EAttribute getPage_Width();
-
-	/**
-	 * Returns the meta object for the attribute '{@link io.github.abelgomez.cpntools.Page#getHeight <em>Height</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Height</em>'.
-	 * @see io.github.abelgomez.cpntools.Page#getHeight()
-	 * @see #getPage()
-	 * @generated
-	 */
-	EAttribute getPage_Height();
+	EReference getPage_Binder();
 
 	/**
 	 * Returns the meta object for the '{@link io.github.abelgomez.cpntools.Page#layout(java.lang.Integer, java.lang.Integer, java.lang.Integer) <em>Layout</em>}' operation.
@@ -5696,6 +5698,82 @@ public interface CpntoolsPackage extends EPackage {
 	EClass getAlias();
 
 	/**
+	 * Returns the meta object for class '{@link io.github.abelgomez.cpntools.Binder <em>Binder</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Binder</em>'.
+	 * @see io.github.abelgomez.cpntools.Binder
+	 * @generated
+	 */
+	EClass getBinder();
+
+	/**
+	 * Returns the meta object for the attribute '{@link io.github.abelgomez.cpntools.Binder#getPosy <em>Posy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Posy</em>'.
+	 * @see io.github.abelgomez.cpntools.Binder#getPosy()
+	 * @see #getBinder()
+	 * @generated
+	 */
+	EAttribute getBinder_Posy();
+
+	/**
+	 * Returns the meta object for the attribute '{@link io.github.abelgomez.cpntools.Binder#getPosx <em>Posx</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Posx</em>'.
+	 * @see io.github.abelgomez.cpntools.Binder#getPosx()
+	 * @see #getBinder()
+	 * @generated
+	 */
+	EAttribute getBinder_Posx();
+
+	/**
+	 * Returns the meta object for the attribute '{@link io.github.abelgomez.cpntools.Binder#getWidth <em>Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Width</em>'.
+	 * @see io.github.abelgomez.cpntools.Binder#getWidth()
+	 * @see #getBinder()
+	 * @generated
+	 */
+	EAttribute getBinder_Width();
+
+	/**
+	 * Returns the meta object for the attribute '{@link io.github.abelgomez.cpntools.Binder#getHeight <em>Height</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Height</em>'.
+	 * @see io.github.abelgomez.cpntools.Binder#getHeight()
+	 * @see #getBinder()
+	 * @generated
+	 */
+	EAttribute getBinder_Height();
+
+	/**
+	 * Returns the meta object for the container reference '{@link io.github.abelgomez.cpntools.Binder#getCpnet <em>Cpnet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Cpnet</em>'.
+	 * @see io.github.abelgomez.cpntools.Binder#getCpnet()
+	 * @see #getBinder()
+	 * @generated
+	 */
+	EReference getBinder_Cpnet();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link io.github.abelgomez.cpntools.Binder#getPages <em>Pages</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pages</em>'.
+	 * @see io.github.abelgomez.cpntools.Binder#getPages()
+	 * @see #getBinder()
+	 * @generated
+	 */
+	EReference getBinder_Pages();
+
+	/**
 	 * Returns the meta object for enum '{@link io.github.abelgomez.cpntools.Orientation <em>Orientation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5755,12 +5833,12 @@ public interface CpntoolsPackage extends EPackage {
 		EReference CPNET__GLOBBOX = eINSTANCE.getCpnet_Globbox();
 
 		/**
-		 * The meta object literal for the '<em><b>Page</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Binder</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CPNET__PAGE = eINSTANCE.getCpnet_Page();
+		EReference CPNET__BINDER = eINSTANCE.getCpnet_Binder();
 
 		/**
 		 * The meta object literal for the '{@link io.github.abelgomez.cpntools.impl.PageImpl <em>Page</em>}' class.
@@ -5805,14 +5883,6 @@ public interface CpntoolsPackage extends EPackage {
 		EAttribute PAGE__NAME = eINSTANCE.getPage_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Cpnet</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PAGE__CPNET = eINSTANCE.getPage_Cpnet();
-
-		/**
 		 * The meta object literal for the '<em><b>Transs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5829,36 +5899,12 @@ public interface CpntoolsPackage extends EPackage {
 		EReference PAGE__ARCS = eINSTANCE.getPage_Arcs();
 
 		/**
-		 * The meta object literal for the '<em><b>Posx</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Binder</b></em>' container reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PAGE__POSX = eINSTANCE.getPage_Posx();
-
-		/**
-		 * The meta object literal for the '<em><b>Posy</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PAGE__POSY = eINSTANCE.getPage_Posy();
-
-		/**
-		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PAGE__WIDTH = eINSTANCE.getPage_Width();
-
-		/**
-		 * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PAGE__HEIGHT = eINSTANCE.getPage_Height();
+		EReference PAGE__BINDER = eINSTANCE.getPage_Binder();
 
 		/**
 		 * The meta object literal for the '<em><b>Layout</b></em>' operation.
@@ -6899,6 +6945,64 @@ public interface CpntoolsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ALIAS = eINSTANCE.getAlias();
+
+		/**
+		 * The meta object literal for the '{@link io.github.abelgomez.cpntools.impl.BinderImpl <em>Binder</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see io.github.abelgomez.cpntools.impl.BinderImpl
+		 * @see io.github.abelgomez.cpntools.impl.CpntoolsPackageImpl#getBinder()
+		 * @generated
+		 */
+		EClass BINDER = eINSTANCE.getBinder();
+
+		/**
+		 * The meta object literal for the '<em><b>Posy</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BINDER__POSY = eINSTANCE.getBinder_Posy();
+
+		/**
+		 * The meta object literal for the '<em><b>Posx</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BINDER__POSX = eINSTANCE.getBinder_Posx();
+
+		/**
+		 * The meta object literal for the '<em><b>Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BINDER__WIDTH = eINSTANCE.getBinder_Width();
+
+		/**
+		 * The meta object literal for the '<em><b>Height</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BINDER__HEIGHT = eINSTANCE.getBinder_Height();
+
+		/**
+		 * The meta object literal for the '<em><b>Cpnet</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BINDER__CPNET = eINSTANCE.getBinder_Cpnet();
+
+		/**
+		 * The meta object literal for the '<em><b>Pages</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BINDER__PAGES = eINSTANCE.getBinder_Pages();
 
 		/**
 		 * The meta object literal for the '{@link io.github.abelgomez.cpntools.Orientation <em>Orientation</em>}' enum.

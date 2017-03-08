@@ -354,6 +354,15 @@ public interface CpntoolsFactory extends EFactory {
 	Alias createAlias();
 
 	/**
+	 * Returns a new object of class '<em>Binder</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Binder</em>'.
+	 * @generated
+	 */
+	Binder createBinder();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -12,6 +12,7 @@ package io.github.abelgomez.cpntools.io.serializer;
 
 import java.io.OutputStream;
 import java.text.MessageFormat;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
@@ -34,6 +35,7 @@ import org.w3c.dom.Node;
 import io.github.abelgomez.cpntools.Alias;
 import io.github.abelgomez.cpntools.Annot;
 import io.github.abelgomez.cpntools.Arc;
+import io.github.abelgomez.cpntools.Binder;
 import io.github.abelgomez.cpntools.Block;
 import io.github.abelgomez.cpntools.ColorSet;
 import io.github.abelgomez.cpntools.Cpnet;
@@ -139,40 +141,55 @@ public class CpnToolsBuilder {
 		if (cpnet.getGlobbox() != null) {
 			element.appendChild(createGlobbox(cpnet.getGlobbox()));
 		}
-		if (cpnet.getPage() != null) {
-			element.appendChild(createPage(cpnet.getPage()));
-			element.appendChild(createInstances(cpnet.getPage()));
-			element.appendChild(createBinders(cpnet.getPage()));
+		if (cpnet.getBinder() != null) {
+			for (Page page : cpnet.getBinder().getPages()) { 
+				element.appendChild(createPage(page));
+			}
+			element.appendChild(createInstances(cpnet.getBinder().getPages()));
+			element.appendChild(createBinder(cpnet.getBinder()));
 		}
 		return element;
 	}
 
-	private Node createBinders(Page page) {
+	private Node createBinder(Binder binder) {
 		Element element = document.createElement("binders");
 		Element cpnbinder = document.createElement("cpnbinder");
 		cpnbinder.setAttribute("id", getModelElementId(cpnbinder));
-		cpnbinder.setAttribute("x", String.valueOf(page.getPosx()));
-		cpnbinder.setAttribute("y", String.valueOf(page.getPosy()));
-		cpnbinder.setAttribute("width", String.valueOf(page.getWidth()));
-		cpnbinder.setAttribute("height", String.valueOf(page.getHeight()));
+		cpnbinder.setAttribute("x", String.valueOf(binder.getPosx()));
+		cpnbinder.setAttribute("y", String.valueOf(binder.getPosy()));
+		cpnbinder.setAttribute("width", String.valueOf(binder.getWidth()));
+		cpnbinder.setAttribute("height", String.valueOf(binder.getHeight()));
 		Element sheets = document.createElement("sheets");
+		for (Page page : binder.getPages()) {
+			sheets.appendChild(createSheet(page));
+		}
 		cpnbinder.appendChild(sheets);
-		Element cpnsheet = document.createElement("cpnsheet");
-		cpnsheet.setAttribute("id", getModelElementId(cpnsheet));
-		cpnsheet.setAttribute("instance", getModelElementId(cpnet));
-		cpnsheet.setAttribute("zoom", "1.0");
-		sheets.appendChild(cpnsheet);
 		element.appendChild(cpnbinder);
 		return element;
 	}
 
-	private Node createInstances(Page page) {
+	private Element createSheet(Page page) {
+		Element cpnsheet = document.createElement("cpnsheet");
+		cpnsheet.setAttribute("id", getModelElementId(cpnsheet));
+		cpnsheet.setAttribute("instance", getModelElementId(page.getName()));
+		cpnsheet.setAttribute("zoom", "1.0");
+		return cpnsheet;
+	}
+
+	private Node createInstances(List<Page> pages) {
 		Element element = document.createElement("instances");
-		Element instance = document.createElement("instance");
-		instance.setAttribute("id", getModelElementId(cpnet));
-		instance.setAttribute("page", getModelElementId(page));
-		element.appendChild(instance);
+		for (Page page : pages) {
+			Element instance = createInstance(page);
+			element.appendChild(instance);
+		}
 		return element;
+	}
+
+	private Element createInstance(Page page) {
+		Element instance = document.createElement("instance");
+		instance.setAttribute("id", getModelElementId(page.getName()));
+		instance.setAttribute("page", getModelElementId(page));
+		return instance;
 	}
 
 	private Node createPage(Page page) {

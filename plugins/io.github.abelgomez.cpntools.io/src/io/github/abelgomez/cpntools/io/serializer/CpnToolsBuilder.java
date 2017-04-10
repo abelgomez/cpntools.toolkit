@@ -42,6 +42,7 @@ import io.github.abelgomez.cpntools.Cpnet;
 import io.github.abelgomez.cpntools.Declaration;
 import io.github.abelgomez.cpntools.DiagramElement;
 import io.github.abelgomez.cpntools.Enumerated;
+import io.github.abelgomez.cpntools.Fusion;
 import io.github.abelgomez.cpntools.Globbox;
 import io.github.abelgomez.cpntools.Initmark;
 import io.github.abelgomez.cpntools.Ml;
@@ -148,9 +149,26 @@ public class CpnToolsBuilder {
 			element.appendChild(createInstances(cpnet.getBinder().getPages()));
 			element.appendChild(createBinder(cpnet.getBinder()));
 		}
+		if (cpnet.getFusions() != null) {
+			for (Fusion fusion: cpnet.getFusions()) { 
+				element.appendChild(createFusion(fusion));
+			}
+		}
 		return element;
 	}
 
+	private Node createFusion(Fusion fusion) {
+		Element element = document.createElement("fusion");
+		element.setAttribute("id", getModelElementId(fusion));
+		element.setAttribute("name", fusion.getName());
+		for (Place place : fusion.getPlaces()) {
+			Element refElement = document.createElement("fusion_elm");
+			refElement.setAttribute("idref", getModelElementId(place));
+			element.appendChild(refElement);
+		}
+		return element;
+	}
+	
 	private Node createBinder(Binder binder) {
 		Element element = document.createElement("binders");
 		Element cpnbinder = document.createElement("cpnbinder");
@@ -246,7 +264,7 @@ public class CpnToolsBuilder {
 		element.setAttribute("id", getModelElementId(transition));
 		element.setAttribute("explicit", String.valueOf(transition.isExplicit()));
 		fillElementAttributesFromDiagramElement(element, transition);
-		element.appendChild(createText(transition.getText().replaceAll(" ", "\n")));
+		element.appendChild(createText(transition.getText()));
 		element.appendChild(createBox(
 				transition.getWidth() != 0 ? transition.getWidth() : BOX_WIDTH, 
 				transition.getHeight() != 0 ? transition.getHeight() : BOX_HEIGHT));
@@ -285,6 +303,9 @@ public class CpnToolsBuilder {
 			place.getInitmark().setPosy(place.getPosy() + ELLIPSE_HEIGHT.intValue());
 			element.appendChild(createInitmark(place.getInitmark()));
 		}
+		if (place.getFusion() != null) {
+			element.appendChild(createFusionInfo(place));
+		}
 		return element;
 	}
 
@@ -296,6 +317,33 @@ public class CpnToolsBuilder {
 		text.setAttribute("tool", TOOL_NAME);
 		text.setAttribute("version", TOOL_VERSION);
 		element.appendChild(text);
+		return element;
+	}
+
+	private Node createFusionInfo(Place place) {
+		Element element = document.createElement("fusioninfo");
+		element.setAttribute("id", getModelElementId(new Object()));
+		if (place.getFusion().getName() != null) {
+			element.setAttribute("name", place.getFusion().getName());
+		}
+		Element posattr = document.createElement("posattr");
+		posattr.setAttribute("x", String.format((Locale) null, "%.6f", place.getPosx() - ELLIPSE_WIDTH * 0.8));
+		posattr.setAttribute("y", String.format((Locale) null, "%.6f", place.getPosy() - ELLIPSE_HEIGHT * 0.8));
+		Element fillattr = document.createElement("fillattr");
+		fillattr.setAttribute("colour", "White");
+		fillattr.setAttribute("pattern", "Solid");
+		fillattr.setAttribute("filled", "false");
+		Element lineattr = document.createElement("lineattr");
+		lineattr.setAttribute("colour", "Black");
+		lineattr.setAttribute("thick", "0");
+		lineattr.setAttribute("type", "Solid");
+		Element textattr = document.createElement("textattr");
+		textattr.setAttribute("colour", "Black");
+		textattr.setAttribute("bold", "false");
+		element.appendChild(posattr);
+		element.appendChild(fillattr);
+		element.appendChild(lineattr);
+		element.appendChild(textattr);
 		return element;
 	}
 

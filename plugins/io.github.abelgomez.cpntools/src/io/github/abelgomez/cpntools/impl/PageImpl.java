@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import edu.uci.ics.jung.algorithms.layout.FRLayout;
+import edu.uci.ics.jung.algorithms.layout.KKLayout;
 import edu.uci.ics.jung.graph.DirectedSparseGraph;
 import edu.uci.ics.jung.graph.util.Pair;
 import io.github.abelgomez.cpntools.Arc;
@@ -280,8 +280,12 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 		DirectedSparseGraph<DiagramElement, Arc> graph = new DirectedSparseGraph<DiagramElement, Arc>();
 		
 		for (Arc arc : this.getArcs()) {
-			graph.addVertex(arc.getPlace());
-			graph.addVertex(arc.getTrans());
+			if (!graph.getVertices().contains(arc.getPlace())) {
+				graph.addVertex(arc.getPlace());
+			}
+			if (!graph.getVertices().contains(arc.getTrans())) {
+				graph.addVertex(arc.getTrans());
+			}
 		
 			Pair<DiagramElement> pair = null;
 			if (arc.getOrientation() == Orientation.PTO_T) {
@@ -292,8 +296,9 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 			graph.addEdge(arc, pair);
 		}
 		
-		FRLayout<DiagramElement, Arc> layout = new FRLayout<DiagramElement, Arc>(
-				graph, new Dimension(width, height));
+		KKLayout<DiagramElement, Arc> layout = new KKLayout<DiagramElement, Arc>(graph);
+		layout.setSize(new Dimension(width, height));
+		layout.setLengthFactor(1.5);
 		layout.initialize();
 		
 		layout.setMaxIterations(steps);

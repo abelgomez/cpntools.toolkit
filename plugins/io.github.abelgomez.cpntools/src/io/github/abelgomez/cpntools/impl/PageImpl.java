@@ -326,7 +326,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 				}
 				if (trans.getTime() != null) {
 					trans.getTime().setPosx(x + 40);
-					trans.getTime().setPosy(y - 30);
+					trans.getTime().setPosy(y + 30);
 				}
 			}
 		}

@@ -53,6 +53,7 @@ import io.github.abelgomez.cpntools.SimpleColorSet;
 import io.github.abelgomez.cpntools.Trans;
 import io.github.abelgomez.cpntools.TransCond;
 import io.github.abelgomez.cpntools.TransPriority;
+import io.github.abelgomez.cpntools.TransTime;
 import io.github.abelgomez.cpntools.Unit;
 import io.github.abelgomez.cpntools.Var;
 
@@ -274,6 +275,9 @@ public class CpnToolsBuilder {
 		if (transition.getPriority() != null) {
 			element.appendChild(createPriority(transition.getPriority()));
 		}
+		if (transition.getTime() != null) {
+			element.appendChild(createTime(transition.getTime()));
+		}
 		Element binding = document.createElement("binding");
 		binding.setAttribute("x", BINDING_POS_X.toString());
 		binding.setAttribute("y", BINDING_POS_Y.toString());
@@ -394,6 +398,13 @@ public class CpnToolsBuilder {
 		Element element = document.createElement("priority");
 		fillElementAttributesFromDiagramElement(element, priority);
 		element.appendChild(createText(priority.getText()));
+		return element;
+	}
+	
+	private Node createTime(TransTime time) {
+		Element element = document.createElement("time");
+		fillElementAttributesFromDiagramElement(element, time);
+		element.appendChild(createText(time.getText()));
 		return element;
 	}
 	

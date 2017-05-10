@@ -11,7 +11,6 @@
 package io.github.abelgomez.cpntools.io.serializer;
 
 import java.io.OutputStream;
-import java.text.MessageFormat;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -357,13 +356,12 @@ public class CpnToolsBuilder {
 		fillElementAttributesFromDiagramElement(element, place);
 		((Element) element.getElementsByTagName("posattr").item(0)).setAttribute("x", Float.toString(place.getPosx() + (place.getWidth() / 2)));
 		((Element) element.getElementsByTagName("posattr").item(0)).setAttribute("y", Float.toString(place.getPosy() - (place.getHeight() / 2)));
-		if (place.getType() == null) {
-			throw new RuntimeException(MessageFormat.format("Place ''{0}'' does not have a type", place));
+		if (place.getType() != null) {
+			Element text = (Element) createText(place.getType().getIdname());
+			text.setAttribute("tool", TOOL_NAME);
+			text.setAttribute("version", TOOL_VERSION);
+			element.appendChild(text);
 		}
-		Element text = (Element) createText(place.getType().getIdname());
-		text.setAttribute("tool", TOOL_NAME);
-		text.setAttribute("version", TOOL_VERSION);
-		element.appendChild(text);
 		return element;
 	}
 

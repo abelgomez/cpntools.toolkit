@@ -21,6 +21,12 @@
    <feature url="features/io.github.abelgomez.cpntools.sdk.feature_0.2.1.201704111854.jar" id="io.github.abelgomez.cpntools.sdk.feature" version="0.2.1.201704111854">
       <category name="CPN Tools Toolkit SDK"/>
    </feature>
+   <feature url="features/io.github.abelgomez.cpntools.feature_0.2.2.201705101525.jar" id="io.github.abelgomez.cpntools.feature" version="0.2.2.201705101525">
+      <category name="CPN Tools Toolkit"/>
+   </feature>
+   <feature url="features/io.github.abelgomez.cpntools.sdk.feature_0.2.2.201705101525.jar" id="io.github.abelgomez.cpntools.sdk.feature" version="0.2.2.201705101525">
+      <category name="CPN Tools Toolkit SDK"/>
+   </feature>
    <category-def name="CPN Tools Toolkit" label="CPN Tools Toolkit">
       <description>
          Plug-ins to create CPN Tools files from EMF. In addition, it provides capabilities to layout and serialize the EMF-compatible Petri nets into the &quot;normative&quot; CPN Tools XML format.

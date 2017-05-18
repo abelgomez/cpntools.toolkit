@@ -73,10 +73,6 @@ public class CpnToolsBuilder {
 	private static final Float TOKEN_POS_X = new Float(-10);
 	private static final Float MARKING_POS_X = new Float(0);
 	private static final Float MARKING_POS_Y = new Float(0);
-	private static final Float ELLIPSE_WIDTH = new Float(60);
-	private static final Float ELLIPSE_HEIGHT = new Float(40);
-	private static final Float BOX_WIDTH = new Float(60);
-	private static final Float BOX_HEIGHT = new Float(40);
 	private static final Float BINDING_POS_X = new Float(7.2);
 	private static final Float BINDING_POS_Y = new Float(-3);
 
@@ -265,9 +261,7 @@ public class CpnToolsBuilder {
 		element.setAttribute("explicit", String.valueOf(transition.isExplicit()));
 		fillElementAttributesFromDiagramElement(element, transition);
 		element.appendChild(createText(transition.getText()));
-		element.appendChild(createBox(
-				transition.getWidth() != 0 ? transition.getWidth() : BOX_WIDTH, 
-				transition.getHeight() != 0 ? transition.getHeight() : BOX_HEIGHT));
+		element.appendChild(createBox(transition.getWidth(), transition.getHeight()));
 		if (transition.getCond() != null) {
 			element.appendChild(createCond(transition.getCond()));
 		}
@@ -289,9 +283,7 @@ public class CpnToolsBuilder {
 		element.setAttribute("id", getModelElementId(place));
 		fillElementAttributesFromDiagramElement(element, place);
 		element.appendChild(createText(place.getText()));
-		element.appendChild(createEllipse(
-				place.getWidth() != 0 ? place.getWidth() : ELLIPSE_WIDTH, 
-				place.getHeight() != 0 ? place.getHeight() : ELLIPSE_HEIGHT));
+		element.appendChild(createEllipse(place.getWidth(), place.getHeight()));
 		Element token = document.createElement("token");
 		token.setAttribute("x", TOKEN_POS_X.toString());
 		token.setAttribute("y", TOKEN_POS_Y.toString());
@@ -302,8 +294,8 @@ public class CpnToolsBuilder {
 		element.appendChild(marking);
 		element.appendChild(createPlaceType(place));
 		if (place.getInitmark() != null) {
-			place.getInitmark().setPosx(place.getPosx() + ELLIPSE_WIDTH.intValue());
-			place.getInitmark().setPosy(place.getPosy() + ELLIPSE_HEIGHT.intValue());
+			place.getInitmark().setPosx(place.getPosx() + place.getWidth());
+			place.getInitmark().setPosy(place.getPosy() + place.getHeight());
 			element.appendChild(createInitmark(place.getInitmark()));
 		}
 		if (place.getFusion() != null) {
@@ -330,8 +322,8 @@ public class CpnToolsBuilder {
 			element.setAttribute("name", place.getFusion().getName());
 		}
 		Element posattr = document.createElement("posattr");
-		posattr.setAttribute("x", String.format((Locale) null, "%.6f", place.getPosx() - ELLIPSE_WIDTH * 0.8));
-		posattr.setAttribute("y", String.format((Locale) null, "%.6f", place.getPosy() - ELLIPSE_HEIGHT * 0.8));
+		posattr.setAttribute("x", String.format((Locale) null, "%.6f", place.getPosx() - place.getWidth() * 0.8));
+		posattr.setAttribute("y", String.format((Locale) null, "%.6f", place.getPosy() - place.getHeight() * 0.8));
 		Element fillattr = document.createElement("fillattr");
 		fillattr.setAttribute("colour", "White");
 		fillattr.setAttribute("pattern", "Solid");
@@ -365,14 +357,14 @@ public class CpnToolsBuilder {
 		return element;
 	}
 
-	private Node createEllipse(Float width, Float height) {
+	private Node createEllipse(Integer width, Integer height) {
 		Element element = document.createElement("ellipse");
 		element.setAttribute("w", width.toString());
 		element.setAttribute("h", height.toString());
 		return element;
 	}
 
-	private Node createBox(Float width, Float height) {
+	private Node createBox(Integer width, Integer height) {
 		Element element = document.createElement("box");
 		element.setAttribute("w", width.toString());
 		element.setAttribute("h", height.toString());
@@ -411,15 +403,15 @@ public class CpnToolsBuilder {
 		posattr.setAttribute("x", String.format((Locale) null, "%.6f", new Float(diagramElement.getPosx())));
 		posattr.setAttribute("y", String.format((Locale) null, "%.6f", new Float(diagramElement.getPosy())));
 		Element fillattr = document.createElement("fillattr");
-		fillattr.setAttribute("colour", diagramElement.getFillColour());
+		fillattr.setAttribute("colour", diagramElement.getFillColour().getLiteral());
 		fillattr.setAttribute("pattern", diagramElement.getFillPattern());
 		fillattr.setAttribute("filled", String.valueOf(diagramElement.isFillFilled()));
 		Element lineattr = document.createElement("lineattr");
-		lineattr.setAttribute("colour", diagramElement.getLineColour());
+		lineattr.setAttribute("colour", diagramElement.getLineColour().getLiteral());
 		lineattr.setAttribute("thick", String.valueOf(diagramElement.getLineThick()));
 		lineattr.setAttribute("type", diagramElement.getLineType());
 		Element textattr = document.createElement("textattr");
-		textattr.setAttribute("colour", diagramElement.getLineColour());
+		textattr.setAttribute("colour", diagramElement.getLineColour().getLiteral());
 		textattr.setAttribute("bold", "false");
 		element.appendChild(posattr);
 		element.appendChild(fillattr);

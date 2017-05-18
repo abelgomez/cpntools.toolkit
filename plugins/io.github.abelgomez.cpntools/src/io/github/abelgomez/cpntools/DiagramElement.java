@@ -41,6 +41,8 @@ import org.eclipse.emf.ecore.EObject;
 public interface DiagramElement extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Line Colour</b></em>' attribute.
+	 * The default value is <code>"Black"</code>.
+	 * The literals are from the enumeration {@link io.github.abelgomez.cpntools.Colour16}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Line Colour</em>' attribute isn't clear,
@@ -48,25 +50,28 @@ public interface DiagramElement extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Line Colour</em>' attribute.
-	 * @see #setLineColour(String)
+	 * @see io.github.abelgomez.cpntools.Colour16
+	 * @see #setLineColour(Colour16)
 	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getDiagramElement_LineColour()
-	 * @model ordered="false"
+	 * @model default="Black" ordered="false"
 	 * @generated
 	 */
-	String getLineColour();
+	Colour16 getLineColour();
 
 	/**
 	 * Sets the value of the '{@link io.github.abelgomez.cpntools.DiagramElement#getLineColour <em>Line Colour</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Line Colour</em>' attribute.
+	 * @see io.github.abelgomez.cpntools.Colour16
 	 * @see #getLineColour()
 	 * @generated
 	 */
-	void setLineColour(String value);
+	void setLineColour(Colour16 value);
 
 	/**
 	 * Returns the value of the '<em><b>Fill Filled</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Fill Filled</em>' attribute isn't clear,
@@ -76,7 +81,7 @@ public interface DiagramElement extends EObject {
 	 * @return the value of the '<em>Fill Filled</em>' attribute.
 	 * @see #setFillFilled(boolean)
 	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getDiagramElement_FillFilled()
-	 * @model ordered="false"
+	 * @model default="false" ordered="false"
 	 * @generated
 	 */
 	boolean isFillFilled();
@@ -93,6 +98,7 @@ public interface DiagramElement extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Line Thick</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Line Thick</em>' attribute isn't clear,
@@ -102,7 +108,7 @@ public interface DiagramElement extends EObject {
 	 * @return the value of the '<em>Line Thick</em>' attribute.
 	 * @see #setLineThick(int)
 	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getDiagramElement_LineThick()
-	 * @model ordered="false"
+	 * @model default="1" ordered="false"
 	 * @generated
 	 */
 	int getLineThick();
@@ -145,6 +151,7 @@ public interface DiagramElement extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Line Type</b></em>' attribute.
+	 * The default value is <code>"Solid"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Line Type</em>' attribute isn't clear,
@@ -154,7 +161,7 @@ public interface DiagramElement extends EObject {
 	 * @return the value of the '<em>Line Type</em>' attribute.
 	 * @see #setLineType(String)
 	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getDiagramElement_LineType()
-	 * @model ordered="false"
+	 * @model default="Solid" ordered="false"
 	 * @generated
 	 */
 	String getLineType();
@@ -197,6 +204,8 @@ public interface DiagramElement extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Fill Colour</b></em>' attribute.
+	 * The default value is <code>"White"</code>.
+	 * The literals are from the enumeration {@link io.github.abelgomez.cpntools.Colour16}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Fill Colour</em>' attribute isn't clear,
@@ -204,25 +213,28 @@ public interface DiagramElement extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fill Colour</em>' attribute.
-	 * @see #setFillColour(String)
+	 * @see io.github.abelgomez.cpntools.Colour16
+	 * @see #setFillColour(Colour16)
 	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getDiagramElement_FillColour()
-	 * @model ordered="false"
+	 * @model default="White" ordered="false"
 	 * @generated
 	 */
-	String getFillColour();
+	Colour16 getFillColour();
 
 	/**
 	 * Sets the value of the '{@link io.github.abelgomez.cpntools.DiagramElement#getFillColour <em>Fill Colour</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Fill Colour</em>' attribute.
+	 * @see io.github.abelgomez.cpntools.Colour16
 	 * @see #getFillColour()
 	 * @generated
 	 */
-	void setFillColour(String value);
+	void setFillColour(Colour16 value);
 
 	/**
 	 * Returns the value of the '<em><b>Fill Pattern</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Fill Pattern</em>' attribute isn't clear,
@@ -232,7 +244,7 @@ public interface DiagramElement extends EObject {
 	 * @return the value of the '<em>Fill Pattern</em>' attribute.
 	 * @see #setFillPattern(String)
 	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getDiagramElement_FillPattern()
-	 * @model ordered="false"
+	 * @model default="" ordered="false"
 	 * @generated
 	 */
 	String getFillPattern();

@@ -18,6 +18,7 @@ import io.github.abelgomez.cpntools.AuxEllipse;
 import io.github.abelgomez.cpntools.AuxText;
 import io.github.abelgomez.cpntools.Binder;
 import io.github.abelgomez.cpntools.Block;
+import io.github.abelgomez.cpntools.Colour16;
 import io.github.abelgomez.cpntools.Cpnet;
 import io.github.abelgomez.cpntools.CpntoolsFactory;
 import io.github.abelgomez.cpntools.CpntoolsPackage;
@@ -153,6 +154,8 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 		switch (eDataType.getClassifierID()) {
 			case CpntoolsPackage.ORIENTATION:
 				return createOrientationFromString(eDataType, initialValue);
+			case CpntoolsPackage.COLOUR16:
+				return createColour16FromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -168,6 +171,8 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 		switch (eDataType.getClassifierID()) {
 			case CpntoolsPackage.ORIENTATION:
 				return convertOrientationToString(eDataType, instanceValue);
+			case CpntoolsPackage.COLOUR16:
+				return convertColour16ToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -560,6 +565,26 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * @generated
 	 */
 	public String convertOrientationToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Colour16 createColour16FromString(EDataType eDataType, String initialValue) {
+		Colour16 result = Colour16.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertColour16ToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

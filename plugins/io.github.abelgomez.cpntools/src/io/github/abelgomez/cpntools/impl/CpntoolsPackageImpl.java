@@ -20,6 +20,7 @@ import io.github.abelgomez.cpntools.Auxiliary;
 import io.github.abelgomez.cpntools.Binder;
 import io.github.abelgomez.cpntools.Block;
 import io.github.abelgomez.cpntools.ColorSet;
+import io.github.abelgomez.cpntools.Colour16;
 import io.github.abelgomez.cpntools.CompoundColorSet;
 import io.github.abelgomez.cpntools.Cpnet;
 import io.github.abelgomez.cpntools.CpntoolsFactory;
@@ -377,6 +378,13 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * @generated
 	 */
 	private EEnum orientationEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum colour16EEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1704,6 +1712,15 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getColour16() {
+		return colour16EEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CpntoolsFactory getCpntoolsFactory() {
 		return (CpntoolsFactory)getEFactoryInstance();
 	}
@@ -1911,6 +1928,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 
 		// Create enums
 		orientationEEnum = createEEnum(ORIENTATION);
+		colour16EEnum = createEEnum(COLOUR16);
 	}
 
 	/**
@@ -2005,19 +2023,19 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 		initEReference(getGroup_Page(), this.getPage(), this.getPage_Group(), "page", null, 1, 1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDiagramElement_LineColour(), ecorePackage.getEString(), "lineColour", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDiagramElement_FillFilled(), ecorePackage.getEBoolean(), "fillFilled", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDiagramElement_LineThick(), ecorePackage.getEInt(), "lineThick", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDiagramElement_LineColour(), this.getColour16(), "lineColour", "Black", 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDiagramElement_FillFilled(), ecorePackage.getEBoolean(), "fillFilled", "false", 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDiagramElement_LineThick(), ecorePackage.getEInt(), "lineThick", "1", 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDiagramElement_Posx(), ecorePackage.getEInt(), "posx", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDiagramElement_LineType(), ecorePackage.getEString(), "lineType", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDiagramElement_LineType(), ecorePackage.getEString(), "lineType", "Solid", 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDiagramElement_Posy(), ecorePackage.getEInt(), "posy", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDiagramElement_FillColour(), ecorePackage.getEString(), "fillColour", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getDiagramElement_FillPattern(), ecorePackage.getEString(), "fillPattern", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDiagramElement_FillColour(), this.getColour16(), "fillColour", "White", 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDiagramElement_FillPattern(), ecorePackage.getEString(), "fillPattern", "", 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDiagramElement_Group(), this.getGroup(), this.getGroup_GroupElms(), "group", null, 0, 1, DiagramElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPlace_Height(), ecorePackage.getEInt(), "height", null, 0, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPlace_Width(), ecorePackage.getEInt(), "width", null, 0, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPlace_Height(), ecorePackage.getEInt(), "height", "40", 0, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPlace_Width(), ecorePackage.getEInt(), "width", "60", 0, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getPlace_Type(), this.getColorSet(), null, "type", null, 1, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getPlace_Initmark(), this.getInitmark(), null, "initmark", null, 0, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getPlace_Port(), this.getPort(), null, "port", null, 0, 1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -2083,8 +2101,8 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 		initEReference(getArc_Page(), this.getPage(), this.getPage_Arcs(), "page", null, 1, 1, Arc.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transEClass, Trans.class, "Trans", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTrans_Height(), ecorePackage.getEInt(), "height", null, 0, 1, Trans.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getTrans_Width(), ecorePackage.getEInt(), "width", null, 0, 1, Trans.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTrans_Height(), ecorePackage.getEInt(), "height", "40", 0, 1, Trans.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getTrans_Width(), ecorePackage.getEInt(), "width", "60", 0, 1, Trans.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getTrans_Explicit(), ecorePackage.getEBoolean(), "explicit", null, 0, 1, Trans.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getTrans_Cond(), this.getTransCond(), null, "cond", null, 0, 1, Trans.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getTrans_Page(), this.getPage(), this.getPage_Transs(), "page", null, 1, 1, Trans.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2170,6 +2188,25 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 		addEEnumLiteral(orientationEEnum, Orientation.UNDEFINED);
 		addEEnumLiteral(orientationEEnum, Orientation.PTO_T);
 		addEEnumLiteral(orientationEEnum, Orientation.TTO_P);
+		addEEnumLiteral(orientationEEnum, Orientation.INHIBITOR);
+
+		initEEnum(colour16EEnum, Colour16.class, "Colour16");
+		addEEnumLiteral(colour16EEnum, Colour16.AQUA);
+		addEEnumLiteral(colour16EEnum, Colour16.BLACK);
+		addEEnumLiteral(colour16EEnum, Colour16.BLUE);
+		addEEnumLiteral(colour16EEnum, Colour16.FUCHSIA);
+		addEEnumLiteral(colour16EEnum, Colour16.GRAY);
+		addEEnumLiteral(colour16EEnum, Colour16.GREEN);
+		addEEnumLiteral(colour16EEnum, Colour16.LIME);
+		addEEnumLiteral(colour16EEnum, Colour16.MAROON);
+		addEEnumLiteral(colour16EEnum, Colour16.NAVY);
+		addEEnumLiteral(colour16EEnum, Colour16.OLIVE);
+		addEEnumLiteral(colour16EEnum, Colour16.PURPLE);
+		addEEnumLiteral(colour16EEnum, Colour16.RED);
+		addEEnumLiteral(colour16EEnum, Colour16.SILVER);
+		addEEnumLiteral(colour16EEnum, Colour16.TEAL);
+		addEEnumLiteral(colour16EEnum, Colour16.WHITE);
+		addEEnumLiteral(colour16EEnum, Colour16.YELLOW);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -11,6 +11,8 @@
 package io.github.abelgomez.cpntools.impl;
 
 import java.awt.Dimension;
+import java.lang.Integer;
+import java.lang.String;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.concurrent.ThreadLocalRandom;
@@ -280,18 +282,14 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 		DirectedSparseGraph<DiagramElement, Arc> graph = new DirectedSparseGraph<DiagramElement, Arc>();
 		
 		for (Arc arc : this.getArcs()) {
-			if (!graph.getVertices().contains(arc.getPlace())) {
-				graph.addVertex(arc.getPlace());
-			}
-			if (!graph.getVertices().contains(arc.getTrans())) {
-				graph.addVertex(arc.getTrans());
-			}
+			graph.addVertex(arc.getPlace());
+			graph.addVertex(arc.getTrans());
 		
 			Pair<DiagramElement> pair = null;
-			if (arc.getOrientation() == Orientation.PTO_T) {
-				pair = new Pair<DiagramElement>(arc.getPlace(), arc.getTrans());
-			} else {
+			if (arc.getOrientation() == Orientation.TTO_P) {
 				pair = new Pair<DiagramElement>(arc.getTrans(), arc.getPlace());
+			} else {
+				pair = new Pair<DiagramElement>(arc.getPlace(), arc.getTrans());
 			}
 			graph.addEdge(arc, pair);
 		}
@@ -326,14 +324,22 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 				}
 				if (trans.getTime() != null) {
 					trans.getTime().setPosx(x + 40);
-					trans.getTime().setPosy(y + 30);
+					trans.getTime().setPosy(y - 30);
 				}
 			}
 		}
 		
-		for (Arc arc : graph.getEdges()) {
-			DiagramElement source = graph.getSource(arc);
-			DiagramElement target = graph.getDest(arc);
+		for (Arc arc : this.getArcs()) {
+			// We must retrieve the edges in this cumbersome way since some arcs may 
+			// be omitted because they contain the same source and target nodes
+			Arc edge = null;
+			if (arc.getOrientation() == Orientation.TTO_P) {
+				edge = graph.findEdge(arc.getTrans(), arc.getPlace());
+			} else {
+				edge = graph.findEdge(arc.getPlace(), arc.getTrans());
+			};
+			DiagramElement source = graph.getSource(edge);
+			DiagramElement target = graph.getDest(edge);
 		
 			int sourceX = (int) layout.getX(source) - (width / 2);
 			int sourceY = (int) layout.getY(source) - (height / 2);

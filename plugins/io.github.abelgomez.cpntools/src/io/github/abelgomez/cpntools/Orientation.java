@@ -56,7 +56,15 @@ public enum Orientation implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TTO_P(2, "TtoP", "TtoP");
+	TTO_P(2, "TtoP", "TtoP"), /**
+	 * The '<em><b>Inhibitor</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #INHIBITOR_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	INHIBITOR(3, "Inhibitor", "Inhibitor");
 
 	/**
 	 * The '<em><b>Undefined</b></em>' literal value.
@@ -104,6 +112,21 @@ public enum Orientation implements Enumerator {
 	public static final int TTO_P_VALUE = 2;
 
 	/**
+	 * The '<em><b>Inhibitor</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Inhibitor</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #INHIBITOR
+	 * @model name="Inhibitor"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int INHIBITOR_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Orientation</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,6 +137,7 @@ public enum Orientation implements Enumerator {
 			UNDEFINED,
 			PTO_T,
 			TTO_P,
+			INHIBITOR,
 		};
 
 	/**
@@ -173,6 +197,7 @@ public enum Orientation implements Enumerator {
 			case UNDEFINED_VALUE: return UNDEFINED;
 			case PTO_T_VALUE: return PTO_T;
 			case TTO_P_VALUE: return TTO_P;
+			case INHIBITOR_VALUE: return INHIBITOR;
 		}
 		return null;
 	}

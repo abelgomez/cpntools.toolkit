@@ -4290,6 +4290,17 @@ public interface CpntoolsPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link io.github.abelgomez.cpntools.Colour16 <em>Colour16</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see io.github.abelgomez.cpntools.Colour16
+	 * @see io.github.abelgomez.cpntools.impl.CpntoolsPackageImpl#getColour16()
+	 * @generated
+	 */
+	int COLOUR16 = 44;
+
+
+	/**
 	 * Returns the meta object for class '{@link io.github.abelgomez.cpntools.Cpnet <em>Cpnet</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5784,6 +5795,16 @@ public interface CpntoolsPackage extends EPackage {
 	EEnum getOrientation();
 
 	/**
+	 * Returns the meta object for enum '{@link io.github.abelgomez.cpntools.Colour16 <em>Colour16</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Colour16</em>'.
+	 * @see io.github.abelgomez.cpntools.Colour16
+	 * @generated
+	 */
+	EEnum getColour16();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7013,6 +7034,16 @@ public interface CpntoolsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ORIENTATION = eINSTANCE.getOrientation();
+
+		/**
+		 * The meta object literal for the '{@link io.github.abelgomez.cpntools.Colour16 <em>Colour16</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see io.github.abelgomez.cpntools.Colour16
+		 * @see io.github.abelgomez.cpntools.impl.CpntoolsPackageImpl#getColour16()
+		 * @generated
+		 */
+		EEnum COLOUR16 = eINSTANCE.getColour16();
 
 	}
 

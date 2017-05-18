@@ -68,7 +68,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int HEIGHT_EDEFAULT = 0;
+	protected static final int HEIGHT_EDEFAULT = 40;
 
 	/**
 	 * The cached value of the '{@link #getHeight() <em>Height</em>}' attribute.
@@ -88,7 +88,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int WIDTH_EDEFAULT = 0;
+	protected static final int WIDTH_EDEFAULT = 60;
 
 	/**
 	 * The cached value of the '{@link #getWidth() <em>Width</em>}' attribute.

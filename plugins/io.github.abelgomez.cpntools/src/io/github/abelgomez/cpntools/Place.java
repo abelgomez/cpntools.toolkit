@@ -41,6 +41,7 @@ import org.eclipse.emf.common.util.EList;
 public interface Place extends DiagramElement {
 	/**
 	 * Returns the value of the '<em><b>Height</b></em>' attribute.
+	 * The default value is <code>"40"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Height</em>' attribute isn't clear,
@@ -50,7 +51,7 @@ public interface Place extends DiagramElement {
 	 * @return the value of the '<em>Height</em>' attribute.
 	 * @see #setHeight(int)
 	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getPlace_Height()
-	 * @model ordered="false"
+	 * @model default="40" ordered="false"
 	 * @generated
 	 */
 	int getHeight();
@@ -67,6 +68,7 @@ public interface Place extends DiagramElement {
 
 	/**
 	 * Returns the value of the '<em><b>Width</b></em>' attribute.
+	 * The default value is <code>"60"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Width</em>' attribute isn't clear,
@@ -76,7 +78,7 @@ public interface Place extends DiagramElement {
 	 * @return the value of the '<em>Width</em>' attribute.
 	 * @see #setWidth(int)
 	 * @see io.github.abelgomez.cpntools.CpntoolsPackage#getPlace_Width()
-	 * @model ordered="false"
+	 * @model default="60" ordered="false"
 	 * @generated
 	 */
 	int getWidth();

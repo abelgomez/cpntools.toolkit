@@ -10,6 +10,7 @@
  *******************************************************************************/
 package io.github.abelgomez.cpntools.impl;
 
+import io.github.abelgomez.cpntools.Colour16;
 import io.github.abelgomez.cpntools.CpntoolsPackage;
 import io.github.abelgomez.cpntools.DiagramElement;
 import io.github.abelgomez.cpntools.Group;
@@ -59,7 +60,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LINE_COLOUR_EDEFAULT = null;
+	protected static final Colour16 LINE_COLOUR_EDEFAULT = Colour16.BLACK;
 
 	/**
 	 * The cached value of the '{@link #getLineColour() <em>Line Colour</em>}' attribute.
@@ -69,7 +70,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected String lineColour = LINE_COLOUR_EDEFAULT;
+	protected Colour16 lineColour = LINE_COLOUR_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isFillFilled() <em>Fill Filled</em>}' attribute.
@@ -99,7 +100,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int LINE_THICK_EDEFAULT = 0;
+	protected static final int LINE_THICK_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getLineThick() <em>Line Thick</em>}' attribute.
@@ -139,7 +140,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LINE_TYPE_EDEFAULT = null;
+	protected static final String LINE_TYPE_EDEFAULT = "Solid";
 
 	/**
 	 * The cached value of the '{@link #getLineType() <em>Line Type</em>}' attribute.
@@ -179,7 +180,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FILL_COLOUR_EDEFAULT = null;
+	protected static final Colour16 FILL_COLOUR_EDEFAULT = Colour16.WHITE;
 
 	/**
 	 * The cached value of the '{@link #getFillColour() <em>Fill Colour</em>}' attribute.
@@ -189,7 +190,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected String fillColour = FILL_COLOUR_EDEFAULT;
+	protected Colour16 fillColour = FILL_COLOUR_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getFillPattern() <em>Fill Pattern</em>}' attribute.
@@ -199,7 +200,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FILL_PATTERN_EDEFAULT = null;
+	protected static final String FILL_PATTERN_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getFillPattern() <em>Fill Pattern</em>}' attribute.
@@ -235,7 +236,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLineColour() {
+	public Colour16 getLineColour() {
 		return lineColour;
 	}
 
@@ -244,9 +245,9 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLineColour(String newLineColour) {
-		String oldLineColour = lineColour;
-		lineColour = newLineColour;
+	public void setLineColour(Colour16 newLineColour) {
+		Colour16 oldLineColour = lineColour;
+		lineColour = newLineColour == null ? LINE_COLOUR_EDEFAULT : newLineColour;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CpntoolsPackage.DIAGRAM_ELEMENT__LINE_COLOUR, oldLineColour, lineColour));
 	}
@@ -361,7 +362,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getFillColour() {
+	public Colour16 getFillColour() {
 		return fillColour;
 	}
 
@@ -370,9 +371,9 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFillColour(String newFillColour) {
-		String oldFillColour = fillColour;
-		fillColour = newFillColour;
+	public void setFillColour(Colour16 newFillColour) {
+		Colour16 oldFillColour = fillColour;
+		fillColour = newFillColour == null ? FILL_COLOUR_EDEFAULT : newFillColour;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, CpntoolsPackage.DIAGRAM_ELEMENT__FILL_COLOUR, oldFillColour, fillColour));
 	}
@@ -522,7 +523,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case CpntoolsPackage.DIAGRAM_ELEMENT__LINE_COLOUR:
-				setLineColour((String)newValue);
+				setLineColour((Colour16)newValue);
 				return;
 			case CpntoolsPackage.DIAGRAM_ELEMENT__FILL_FILLED:
 				setFillFilled((Boolean)newValue);
@@ -540,7 +541,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 				setPosy((Integer)newValue);
 				return;
 			case CpntoolsPackage.DIAGRAM_ELEMENT__FILL_COLOUR:
-				setFillColour((String)newValue);
+				setFillColour((Colour16)newValue);
 				return;
 			case CpntoolsPackage.DIAGRAM_ELEMENT__FILL_PATTERN:
 				setFillPattern((String)newValue);
@@ -600,7 +601,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case CpntoolsPackage.DIAGRAM_ELEMENT__LINE_COLOUR:
-				return LINE_COLOUR_EDEFAULT == null ? lineColour != null : !LINE_COLOUR_EDEFAULT.equals(lineColour);
+				return lineColour != LINE_COLOUR_EDEFAULT;
 			case CpntoolsPackage.DIAGRAM_ELEMENT__FILL_FILLED:
 				return fillFilled != FILL_FILLED_EDEFAULT;
 			case CpntoolsPackage.DIAGRAM_ELEMENT__LINE_THICK:
@@ -612,7 +613,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 			case CpntoolsPackage.DIAGRAM_ELEMENT__POSY:
 				return posy != POSY_EDEFAULT;
 			case CpntoolsPackage.DIAGRAM_ELEMENT__FILL_COLOUR:
-				return FILL_COLOUR_EDEFAULT == null ? fillColour != null : !FILL_COLOUR_EDEFAULT.equals(fillColour);
+				return fillColour != FILL_COLOUR_EDEFAULT;
 			case CpntoolsPackage.DIAGRAM_ELEMENT__FILL_PATTERN:
 				return FILL_PATTERN_EDEFAULT == null ? fillPattern != null : !FILL_PATTERN_EDEFAULT.equals(fillPattern);
 			case CpntoolsPackage.DIAGRAM_ELEMENT__GROUP:

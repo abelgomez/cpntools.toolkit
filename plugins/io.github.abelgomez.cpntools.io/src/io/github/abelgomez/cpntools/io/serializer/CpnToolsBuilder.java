@@ -11,6 +11,7 @@
 package io.github.abelgomez.cpntools.io.serializer;
 
 import java.io.OutputStream;
+import java.text.MessageFormat;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -445,6 +446,11 @@ public class CpnToolsBuilder {
 			} else if (declaration instanceof Var) {
 				Var var = (Var) declaration;
 				element.appendChild(createVar(var));
+			} else if (declaration instanceof Block) {
+				Block nestedBlock = (Block) declaration;
+				element.appendChild(createBlock(nestedBlock));
+			} else {
+				throw new RuntimeException(MessageFormat.format("Unexpected declaration type ''{0}''", declaration));
 			}
 		}
 		return element;

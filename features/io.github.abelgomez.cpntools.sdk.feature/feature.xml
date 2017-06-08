@@ -12,7 +12,7 @@
 <feature
       id="io.github.abelgomez.cpntools.sdk.feature"
       label="CPN Tools Support SDK"
-      version="0.3.1.qualifier"
+      version="0.4.0.qualifier"
       provider-name="Abel Gómez">
 
    <description url="https://github.com/abelgomez/cpntools.toolkit">
@@ -120,15 +120,15 @@ This Agreement is governed by the laws of the State of New York and the intellec
 
    <requires>
       <import plugin="org.junit" version="4.12.0" match="greaterOrEqual"/>
-      <import plugin="io.github.abelgomez.cpntools.io" version="0.1.0" match="greaterOrEqual"/>
       <import feature="org.eclipse.emf.sdk" version="2.12.0.v20160526-0356"/>
+      <import plugin="io.github.abelgomez.cpntools.io" version="0.4.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
          id="io.github.abelgomez.cpntools.io.test"
          download-size="0"
          install-size="0"
-         version="0.3.1.qualifier"
+         version="0.4.0.qualifier"
          unpack="false"/>
 
 </feature>

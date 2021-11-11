@@ -4,7 +4,7 @@
     modelDirectory="/io.github.abelgomez.cpntools/src" modelPluginID="io.github.abelgomez.cpntools"
     modelName="Cpntools" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    operationReflection="true" importOrganizing="true">
+    operationReflection="true" importOrganizing="true" eclipsePlatformVersion="2020-06">
   <foreignModel>cpntools.ecore</foreignModel>
   <genPackages prefix="Cpntools" basePackage="io.github.abelgomez" disposableProviderFactory="true"
       ecorePackage="cpntools.ecore#/">
@@ -50,7 +50,7 @@
         <genParameters ecoreParameter="cpntools.ecore#//Page/layout/height"/>
         <genParameters ecoreParameter="cpntools.ecore#//Page/layout/steps"/>
       </genOperations>
-      <genOperations ecoreOperation="cpntools.ecore#//Page/layout.1" body="int width = new Float(getBinder().getWidth() * 0.9).intValue();&#xD;&#xA;int height = new Float(getBinder().getHeight() * 0.9).intValue();&#xD;&#xA;layout(width, height, 5000);"/>
+      <genOperations ecoreOperation="cpntools.ecore#//Page/layout.1" body="int width = Float.valueOf(getBinder().getWidth() * 0.9f).intValue();&#xA;int height = Float.valueOf(getBinder().getHeight() * 0.9f).intValue();&#xA;layout(width, height, 5000);"/>
     </genClasses>
     <genClasses ecoreClass="cpntools.ecore#//Group">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cpntools.ecore#//Group/groupElms"/>

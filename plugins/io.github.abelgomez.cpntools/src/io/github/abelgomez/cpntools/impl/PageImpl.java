@@ -14,6 +14,8 @@
 package io.github.abelgomez.cpntools.impl;
 
 import java.awt.Dimension;
+import java.lang.Integer;
+import java.lang.String;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.concurrent.ThreadLocalRandom;

@@ -14,8 +14,8 @@
 package io.github.abelgomez.cpntools.io.serializer.test;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 
 import org.junit.Test;
 
@@ -43,14 +43,14 @@ import io.github.abelgomez.cpntools.io.serializer.SerializationException;
  */
 public class CpnToolsBuilderTest {
 
-	private static final String TEST_FILE = "test.cpn";
-
 	@Test
-	public void test() throws FileNotFoundException, SerializationException {
+	public void test() throws SerializationException, IOException {
 		Cpnet net = buildSampleNet();
 		CpnToolsBuilder builder = new CpnToolsBuilder(net);
 		builder.serialize(System.out);
-		builder.serialize(new FileOutputStream(new File(TEST_FILE)));
+		File tempFile = File.createTempFile("cpntools-", ".xml");
+		tempFile.deleteOnExit();
+		builder.serialize(new FileOutputStream(tempFile));
 	}
 
 	private Cpnet buildSampleNet() {

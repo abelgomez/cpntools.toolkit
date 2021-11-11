@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (c) 2021 Abel Gómez.
+   
+    This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License 2.0
+    which accompanies this distribution, and is available at
+    https://www.eclipse.org/legal/epl-2.0/
+   
+    SPDX-License-Identifier: EPL-2.0
+   
+    Contributors:
+        Abel Gómez (abgolla@gmail.com) - initial API and implementation
+ -->
+<site>
+   <feature id="io.github.abelgomez.cpntools.feature">
+      <category name="CPN Tools Toolkit"/>
+   </feature>
+   <feature id="io.github.abelgomez.cpntools.sdk.feature">
+      <category name="CPN Tools Toolkit"/>
+   </feature>
+   <category-def name="CPN Tools Toolkit" label="CPN Tools Toolkit">
+      <description>
+         Plug-ins supporting the generation and serialization of Petri nets conforming to the CPN Tools XML format.
+      </description>
+   </category-def>
+   <repository-reference location="http://download.eclipse.org/releases/2021-09" enabled="true" />
+</site>

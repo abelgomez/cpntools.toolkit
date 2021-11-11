@@ -1,0 +1,30 @@
+<!--
+    Copyright (c) 2021 Abel Gómez.
+   
+    This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License 2.0
+    which accompanies this distribution, and is available at
+    https://www.eclipse.org/legal/epl-2.0/
+   
+    SPDX-License-Identifier: EPL-2.0
+   
+    Contributors:
+        Abel Gómez (abgolla@gmail.com) - initial API and implementation
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>io.github.abelgomez.cpntools</groupId>
+		<artifactId>root</artifactId>
+		<version>0.4.0-SNAPSHOT</version>
+	</parent>
+	<groupId>io.github.abelgomez.cpntools</groupId>
+	<artifactId>features</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>io.github.abelgomez.cpntools.feature</module>
+		<module>io.github.abelgomez.cpntools.sdk.feature</module>
+	</modules>
+</project>

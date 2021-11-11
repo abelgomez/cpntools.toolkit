@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2021 Abel Gómez.
+ * Copyright (c) 2021 Abel GÃ³mez.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 2.0
@@ -9,7 +9,7 @@
  * SPDX-License-Identifier: EPL-2.0
  *
  * Contributors:
- *     Abel Gómez (abgolla@gmail.com) - initial API and implementation
+ *     Abel GÃ³mez (abgolla@gmail.com) - initial API and implementation
  *******************************************************************************/
 package io.github.abelgomez.cpntools.io.serializer;
 
@@ -17,7 +17,7 @@ package io.github.abelgomez.cpntools.io.serializer;
  * {@link Exception} indicating that an error ocurred while s serialization
  * process is taking place.
  * 
- * @author Abel Gómez (agomezlla@uoc.edu)
+ * @author Abel Gï¿½mez (agomezlla@uoc.edu)
  *
  */
 public class SerializationException extends Exception {

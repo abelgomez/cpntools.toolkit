@@ -1,12 +1,15 @@
 /*******************************************************************************
- * Copyright (c) 2017 Abel Gómez.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
+ * Copyright (c) 2021 Abel GÃ³mez.
+ *
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License 2.0
  * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
+ * https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
  *
  * Contributors:
- *     Abel Gómez (abgolla@gmail.com) - initial API and implementation
+ *     Abel GÃ³mez (abgolla@gmail.com) - initial API and implementation
  *******************************************************************************/
 package io.github.abelgomez.cpntools.io.serializer.test;
 
@@ -35,7 +38,7 @@ import io.github.abelgomez.cpntools.io.serializer.SerializationException;
  * Simple class that demonstrates how the {@link CpnToolsBuilder} class is used
  * to serialize a {@link Cpnet}
  * 
- * @author Abel Gómez (agomezlla@uoc.edu)
+ * @author Abel Gï¿½mez (agomezlla@uoc.edu)
  *
  */
 public class CpnToolsBuilderTest {

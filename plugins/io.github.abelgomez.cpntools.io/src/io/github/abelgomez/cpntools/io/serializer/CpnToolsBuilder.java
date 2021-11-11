@@ -73,12 +73,12 @@ public class CpnToolsBuilder {
 	private static final String TOOL_NAME = "CPN Tools";
 	private static final String TOOL_VERSION = "4.0.1";
 	private static final String TOOL_FORMAT = "6";
-	private static final Float TOKEN_POS_Y = new Float(0);
-	private static final Float TOKEN_POS_X = new Float(-10);
-	private static final Float MARKING_POS_X = new Float(0);
-	private static final Float MARKING_POS_Y = new Float(0);
-	private static final Float BINDING_POS_X = new Float(7.2);
-	private static final Float BINDING_POS_Y = new Float(-3);
+	private static final Float TOKEN_POS_Y = 0.0f;
+	private static final Float TOKEN_POS_X = -10.0f;
+	private static final Float MARKING_POS_X = 0.0f;
+	private static final Float MARKING_POS_Y = 0.0f;
+	private static final Float BINDING_POS_X = 7.2f;
+	private static final Float BINDING_POS_Y = -3.0f;
 
 	private Document document = null;
 	private Cpnet cpnet = null;
@@ -404,8 +404,8 @@ public class CpnToolsBuilder {
 	
 	private Node fillElementAttributesFromDiagramElement(Element element, DiagramElement diagramElement) {
 		Element posattr = document.createElement("posattr");
-		posattr.setAttribute("x", String.format((Locale) null, "%.6f", new Float(diagramElement.getPosx())));
-		posattr.setAttribute("y", String.format((Locale) null, "%.6f", new Float(diagramElement.getPosy())));
+		posattr.setAttribute("x", String.format((Locale) null, "%.6f", Float.valueOf(diagramElement.getPosx())));
+		posattr.setAttribute("y", String.format((Locale) null, "%.6f", Float.valueOf(diagramElement.getPosy())));
 		Element fillattr = document.createElement("fillattr");
 		fillattr.setAttribute("colour", diagramElement.getFillColour().getLiteral());
 		fillattr.setAttribute("pattern", diagramElement.getFillPattern());

@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: CPN Tools I/O Plug-in
 Bundle-SymbolicName: io.github.abelgomez.cpntools.io
+Automatic-Module-Name: io.github.abelgomez.cpntools.io
 Bundle-Version: 0.4.0.qualifier
 Bundle-Vendor: Abel Gómez
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

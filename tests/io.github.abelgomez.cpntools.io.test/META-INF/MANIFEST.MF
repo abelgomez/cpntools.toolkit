@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: CPN Tools I/O Test Plug-in
 Bundle-SymbolicName: io.github.abelgomez.cpntools.io.test
+Automatic-Module-Name: io.github.abelgomez.cpntools.io.test
 Bundle-Version: 0.4.0.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.junit;bundle-version="4.12.0",

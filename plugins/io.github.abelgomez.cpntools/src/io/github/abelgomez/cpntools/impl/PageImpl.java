@@ -14,8 +14,6 @@
 package io.github.abelgomez.cpntools.impl;
 
 import java.awt.Dimension;
-import java.lang.Integer;
-import java.lang.String;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.concurrent.ThreadLocalRandom;
@@ -374,8 +372,8 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 */
 	@Override
 	public void layout() {
-		int width = new Float(getBinder().getWidth() * 0.9).intValue();
-		int height = new Float(getBinder().getHeight() * 0.9).intValue();
+		int width = Float.valueOf(getBinder().getWidth() * 0.9f).intValue();
+		int height = Float.valueOf(getBinder().getHeight() * 0.9f).intValue();
 		layout(width, height, 5000);
 	}
 

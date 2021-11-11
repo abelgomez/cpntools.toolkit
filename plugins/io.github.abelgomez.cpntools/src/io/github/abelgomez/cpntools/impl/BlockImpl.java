@@ -103,6 +103,7 @@ public class BlockImpl extends DeclarationImpl implements Block {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getIdname() {
 		return idname;
 	}
@@ -112,6 +113,7 @@ public class BlockImpl extends DeclarationImpl implements Block {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdname(String newIdname) {
 		String oldIdname = idname;
 		idname = newIdname;
@@ -124,6 +126,7 @@ public class BlockImpl extends DeclarationImpl implements Block {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Declaration> getDeclarations() {
 		if (declarations == null) {
 			declarations = new EObjectContainmentWithInverseEList<Declaration>(Declaration.class, this, CpntoolsPackage.BLOCK__DECLARATIONS, CpntoolsPackage.DECLARATION__BLOCK);
@@ -239,7 +242,7 @@ public class BlockImpl extends DeclarationImpl implements Block {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (idname: ");
 		result.append(idname);
 		result.append(')');

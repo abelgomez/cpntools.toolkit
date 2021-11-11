@@ -82,6 +82,7 @@ public class PortImpl extends DiagramElementImpl implements Port {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPortType() {
 		return portType;
 	}
@@ -91,6 +92,7 @@ public class PortImpl extends DiagramElementImpl implements Port {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPortType(String newPortType) {
 		String oldPortType = portType;
 		portType = newPortType;
@@ -165,7 +167,7 @@ public class PortImpl extends DiagramElementImpl implements Port {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (portType: ");
 		result.append(portType);
 		result.append(')');

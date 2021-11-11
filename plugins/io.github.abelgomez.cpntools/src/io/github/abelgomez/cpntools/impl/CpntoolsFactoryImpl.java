@@ -186,6 +186,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Cpnet createCpnet() {
 		CpnetImpl cpnet = new CpnetImpl();
 		return cpnet;
@@ -196,6 +197,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page createPage() {
 		PageImpl page = new PageImpl();
 		return page;
@@ -206,6 +208,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Group createGroup() {
 		GroupImpl group = new GroupImpl();
 		return group;
@@ -216,6 +219,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Place createPlace() {
 		PlaceImpl place = new PlaceImpl();
 		return place;
@@ -226,6 +230,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Initmark createInitmark() {
 		InitmarkImpl initmark = new InitmarkImpl();
 		return initmark;
@@ -236,6 +241,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Port createPort() {
 		PortImpl port = new PortImpl();
 		return port;
@@ -246,6 +252,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Fusion createFusion() {
 		FusionImpl fusion = new FusionImpl();
 		return fusion;
@@ -256,6 +263,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Globbox createGlobbox() {
 		GlobboxImpl globbox = new GlobboxImpl();
 		return globbox;
@@ -266,6 +274,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Var createVar() {
 		VarImpl var = new VarImpl();
 		return var;
@@ -276,6 +285,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Globref createGlobref() {
 		GlobrefImpl globref = new GlobrefImpl();
 		return globref;
@@ -286,6 +296,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Ml createMl() {
 		MlImpl ml = new MlImpl();
 		return ml;
@@ -296,6 +307,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block createBlock() {
 		BlockImpl block = new BlockImpl();
 		return block;
@@ -306,6 +318,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuxText createAuxText() {
 		AuxTextImpl auxText = new AuxTextImpl();
 		return auxText;
@@ -316,6 +329,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Arc createArc() {
 		ArcImpl arc = new ArcImpl();
 		return arc;
@@ -326,6 +340,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trans createTrans() {
 		TransImpl trans = new TransImpl();
 		return trans;
@@ -336,6 +351,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransCond createTransCond() {
 		TransCondImpl transCond = new TransCondImpl();
 		return transCond;
@@ -346,6 +362,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransPriority createTransPriority() {
 		TransPriorityImpl transPriority = new TransPriorityImpl();
 		return transPriority;
@@ -356,6 +373,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransTime createTransTime() {
 		TransTimeImpl transTime = new TransTimeImpl();
 		return transTime;
@@ -366,6 +384,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Annot createAnnot() {
 		AnnotImpl annot = new AnnotImpl();
 		return annot;
@@ -376,6 +395,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuxEllipse createAuxEllipse() {
 		AuxEllipseImpl auxEllipse = new AuxEllipseImpl();
 		return auxEllipse;
@@ -386,6 +406,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AuxBox createAuxBox() {
 		AuxBoxImpl auxBox = new AuxBoxImpl();
 		return auxBox;
@@ -396,6 +417,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Unit createUnit() {
 		UnitImpl unit = new UnitImpl();
 		return unit;
@@ -406,6 +428,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public io.github.abelgomez.cpntools.Boolean createBoolean() {
 		BooleanImpl boolean_ = new BooleanImpl();
 		return boolean_;
@@ -416,6 +439,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public io.github.abelgomez.cpntools.Integer createInteger() {
 		IntegerImpl integer = new IntegerImpl();
 		return integer;
@@ -426,6 +450,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LargeInteger createLargeInteger() {
 		LargeIntegerImpl largeInteger = new LargeIntegerImpl();
 		return largeInteger;
@@ -436,6 +461,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Real createReal() {
 		RealImpl real = new RealImpl();
 		return real;
@@ -446,6 +472,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Time createTime() {
 		TimeImpl time = new TimeImpl();
 		return time;
@@ -456,6 +483,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public io.github.abelgomez.cpntools.String createString() {
 		StringImpl string = new StringImpl();
 		return string;
@@ -466,6 +494,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Enumerated createEnumerated() {
 		EnumeratedImpl enumerated = new EnumeratedImpl();
 		return enumerated;
@@ -476,6 +505,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Index createIndex() {
 		IndexImpl index = new IndexImpl();
 		return index;
@@ -486,6 +516,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Product createProduct() {
 		ProductImpl product = new ProductImpl();
 		return product;
@@ -496,6 +527,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Record createRecord() {
 		RecordImpl record = new RecordImpl();
 		return record;
@@ -506,6 +538,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public List createList() {
 		ListImpl list = new ListImpl();
 		return list;
@@ -516,6 +549,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Union createUnion() {
 		UnionImpl union = new UnionImpl();
 		return union;
@@ -526,6 +560,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Subset createSubset() {
 		SubsetImpl subset = new SubsetImpl();
 		return subset;
@@ -536,6 +571,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Alias createAlias() {
 		AliasImpl alias = new AliasImpl();
 		return alias;
@@ -546,6 +582,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Binder createBinder() {
 		BinderImpl binder = new BinderImpl();
 		return binder;
@@ -596,6 +633,7 @@ public class CpntoolsFactoryImpl extends EFactoryImpl implements CpntoolsFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CpntoolsPackage getCpntoolsPackage() {
 		return (CpntoolsPackage)getEPackage();
 	}

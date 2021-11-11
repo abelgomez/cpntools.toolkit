@@ -84,6 +84,7 @@ public class StringImpl extends SimpleColorSetImpl implements io.github.abelgome
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getWith() {
 		if (with == null) {
 			with = new EDataTypeUniqueEList<String>(String.class, this, CpntoolsPackage.STRING__WITH);
@@ -96,6 +97,7 @@ public class StringImpl extends SimpleColorSetImpl implements io.github.abelgome
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getAnd() {
 		if (and == null) {
 			and = new EDataTypeUniqueEList<String>(String.class, this, CpntoolsPackage.STRING__AND);
@@ -183,7 +185,7 @@ public class StringImpl extends SimpleColorSetImpl implements io.github.abelgome
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (with: ");
 		result.append(with);
 		result.append(", and: ");

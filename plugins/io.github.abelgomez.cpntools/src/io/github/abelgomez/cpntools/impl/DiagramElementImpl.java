@@ -239,6 +239,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Colour16 getLineColour() {
 		return lineColour;
 	}
@@ -248,6 +249,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLineColour(Colour16 newLineColour) {
 		Colour16 oldLineColour = lineColour;
 		lineColour = newLineColour == null ? LINE_COLOUR_EDEFAULT : newLineColour;
@@ -260,6 +262,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isFillFilled() {
 		return fillFilled;
 	}
@@ -269,6 +272,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFillFilled(boolean newFillFilled) {
 		boolean oldFillFilled = fillFilled;
 		fillFilled = newFillFilled;
@@ -281,6 +285,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getLineThick() {
 		return lineThick;
 	}
@@ -290,6 +295,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLineThick(int newLineThick) {
 		int oldLineThick = lineThick;
 		lineThick = newLineThick;
@@ -302,6 +308,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getPosx() {
 		return posx;
 	}
@@ -311,6 +318,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPosx(int newPosx) {
 		int oldPosx = posx;
 		posx = newPosx;
@@ -323,6 +331,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLineType() {
 		return lineType;
 	}
@@ -332,6 +341,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLineType(String newLineType) {
 		String oldLineType = lineType;
 		lineType = newLineType;
@@ -344,6 +354,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getPosy() {
 		return posy;
 	}
@@ -353,6 +364,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPosy(int newPosy) {
 		int oldPosy = posy;
 		posy = newPosy;
@@ -365,6 +377,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Colour16 getFillColour() {
 		return fillColour;
 	}
@@ -374,6 +387,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFillColour(Colour16 newFillColour) {
 		Colour16 oldFillColour = fillColour;
 		fillColour = newFillColour == null ? FILL_COLOUR_EDEFAULT : newFillColour;
@@ -386,6 +400,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFillPattern() {
 		return fillPattern;
 	}
@@ -395,6 +410,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFillPattern(String newFillPattern) {
 		String oldFillPattern = fillPattern;
 		fillPattern = newFillPattern;
@@ -407,6 +423,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Group getGroup() {
 		if (eContainerFeatureID() != CpntoolsPackage.DIAGRAM_ELEMENT__GROUP) return null;
 		return (Group)eInternalContainer();
@@ -427,6 +444,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGroup(Group newGroup) {
 		if (newGroup != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.DIAGRAM_ELEMENT__GROUP && newGroup != null)) {
 			if (EcoreUtil.isAncestor(this, newGroup))
@@ -634,7 +652,7 @@ public abstract class DiagramElementImpl extends MinimalEObjectImpl.Container im
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (lineColour: ");
 		result.append(lineColour);
 		result.append(", fillFilled: ");

@@ -74,6 +74,7 @@ public class IndexImpl extends SimpleColorSetImpl implements Index {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getWith() {
 		if (with == null) {
 			with = new EDataTypeUniqueEList<String>(String.class, this, CpntoolsPackage.INDEX__WITH);
@@ -150,7 +151,7 @@ public class IndexImpl extends SimpleColorSetImpl implements Index {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (with: ");
 		result.append(with);
 		result.append(')');

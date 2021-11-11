@@ -2,6 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: io.github.abelgomez.cpntools;singleton:=true
+Automatic-Module-Name: io.github.abelgomez.cpntools
 Bundle-Version: 0.4.0.qualifier
 Bundle-ClassPath: .,
  lib/bundles/guava-19.0.jar,

@@ -95,6 +95,7 @@ public class VarImpl extends DeclarationImpl implements Var {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getIdname() {
 		return idname;
 	}
@@ -104,6 +105,7 @@ public class VarImpl extends DeclarationImpl implements Var {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdname(String newIdname) {
 		String oldIdname = idname;
 		idname = newIdname;
@@ -116,6 +118,7 @@ public class VarImpl extends DeclarationImpl implements Var {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ColorSet getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
@@ -142,6 +145,7 @@ public class VarImpl extends DeclarationImpl implements Var {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(ColorSet newType) {
 		ColorSet oldType = type;
 		type = newType;
@@ -227,7 +231,7 @@ public class VarImpl extends DeclarationImpl implements Var {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (idname: ");
 		result.append(idname);
 		result.append(')');

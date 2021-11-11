@@ -65,6 +65,7 @@ public abstract class AuxiliaryImpl extends DiagramElementImpl implements Auxili
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getPage() {
 		if (eContainerFeatureID() != CpntoolsPackage.AUXILIARY__PAGE) return null;
 		return (Page)eInternalContainer();
@@ -85,6 +86,7 @@ public abstract class AuxiliaryImpl extends DiagramElementImpl implements Auxili
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPage(Page newPage) {
 		if (newPage != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.AUXILIARY__PAGE && newPage != null)) {
 			if (EcoreUtil.isAncestor(this, newPage))

@@ -68,6 +68,7 @@ public abstract class DeclarationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Globbox getGlobbox() {
 		if (eContainerFeatureID() != CpntoolsPackage.DECLARATION__GLOBBOX) return null;
 		return (Globbox)eInternalContainer();
@@ -88,6 +89,7 @@ public abstract class DeclarationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGlobbox(Globbox newGlobbox) {
 		if (newGlobbox != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.DECLARATION__GLOBBOX && newGlobbox != null)) {
 			if (EcoreUtil.isAncestor(this, newGlobbox))
@@ -109,6 +111,7 @@ public abstract class DeclarationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Block getBlock() {
 		if (eContainerFeatureID() != CpntoolsPackage.DECLARATION__BLOCK) return null;
 		return (Block)eInternalContainer();
@@ -129,6 +132,7 @@ public abstract class DeclarationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBlock(Block newBlock) {
 		if (newBlock != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.DECLARATION__BLOCK && newBlock != null)) {
 			if (EcoreUtil.isAncestor(this, newBlock))

@@ -170,6 +170,7 @@ public class BinderImpl extends MinimalEObjectImpl.Container implements Binder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getPosy() {
 		return posy;
 	}
@@ -179,6 +180,7 @@ public class BinderImpl extends MinimalEObjectImpl.Container implements Binder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPosy(int newPosy) {
 		int oldPosy = posy;
 		posy = newPosy;
@@ -191,6 +193,7 @@ public class BinderImpl extends MinimalEObjectImpl.Container implements Binder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getPosx() {
 		return posx;
 	}
@@ -200,6 +203,7 @@ public class BinderImpl extends MinimalEObjectImpl.Container implements Binder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPosx(int newPosx) {
 		int oldPosx = posx;
 		posx = newPosx;
@@ -212,6 +216,7 @@ public class BinderImpl extends MinimalEObjectImpl.Container implements Binder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getWidth() {
 		return width;
 	}
@@ -221,6 +226,7 @@ public class BinderImpl extends MinimalEObjectImpl.Container implements Binder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWidth(int newWidth) {
 		int oldWidth = width;
 		width = newWidth;
@@ -233,6 +239,7 @@ public class BinderImpl extends MinimalEObjectImpl.Container implements Binder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getHeight() {
 		return height;
 	}
@@ -242,6 +249,7 @@ public class BinderImpl extends MinimalEObjectImpl.Container implements Binder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeight(int newHeight) {
 		int oldHeight = height;
 		height = newHeight;
@@ -254,6 +262,7 @@ public class BinderImpl extends MinimalEObjectImpl.Container implements Binder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Cpnet getCpnet() {
 		if (eContainerFeatureID() != CpntoolsPackage.BINDER__CPNET) return null;
 		return (Cpnet)eInternalContainer();
@@ -274,6 +283,7 @@ public class BinderImpl extends MinimalEObjectImpl.Container implements Binder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCpnet(Cpnet newCpnet) {
 		if (newCpnet != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.BINDER__CPNET && newCpnet != null)) {
 			if (EcoreUtil.isAncestor(this, newCpnet))
@@ -295,6 +305,7 @@ public class BinderImpl extends MinimalEObjectImpl.Container implements Binder {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Page> getPages() {
 		if (pages == null) {
 			pages = new EObjectContainmentWithInverseEList<Page>(Page.class, this, CpntoolsPackage.BINDER__PAGES, CpntoolsPackage.PAGE__BINDER);
@@ -470,7 +481,7 @@ public class BinderImpl extends MinimalEObjectImpl.Container implements Binder {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (posy: ");
 		result.append(posy);
 		result.append(", posx: ");

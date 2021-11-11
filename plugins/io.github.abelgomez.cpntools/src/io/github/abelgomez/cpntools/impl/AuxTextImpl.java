@@ -82,6 +82,7 @@ public class AuxTextImpl extends AuxiliaryImpl implements AuxText {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getText() {
 		return text;
 	}
@@ -91,6 +92,7 @@ public class AuxTextImpl extends AuxiliaryImpl implements AuxText {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(String newText) {
 		String oldText = text;
 		text = newText;
@@ -165,7 +167,7 @@ public class AuxTextImpl extends AuxiliaryImpl implements AuxText {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (text: ");
 		result.append(text);
 		result.append(')');

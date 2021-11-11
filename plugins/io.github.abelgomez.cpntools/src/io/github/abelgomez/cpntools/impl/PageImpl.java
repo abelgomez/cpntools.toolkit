@@ -159,6 +159,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Group> getGroup() {
 		if (group == null) {
 			group = new EObjectContainmentWithInverseEList<Group>(Group.class, this, CpntoolsPackage.PAGE__GROUP, CpntoolsPackage.GROUP__PAGE);
@@ -171,6 +172,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Place> getPlaces() {
 		if (places == null) {
 			places = new EObjectContainmentWithInverseEList<Place>(Place.class, this, CpntoolsPackage.PAGE__PLACES, CpntoolsPackage.PLACE__PAGE);
@@ -183,6 +185,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Auxiliary> getAuxiliarys() {
 		if (auxiliarys == null) {
 			auxiliarys = new EObjectContainmentWithInverseEList<Auxiliary>(Auxiliary.class, this, CpntoolsPackage.PAGE__AUXILIARYS, CpntoolsPackage.AUXILIARY__PAGE);
@@ -195,6 +198,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -204,6 +208,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -216,6 +221,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Trans> getTranss() {
 		if (transs == null) {
 			transs = new EObjectContainmentWithInverseEList<Trans>(Trans.class, this, CpntoolsPackage.PAGE__TRANSS, CpntoolsPackage.TRANS__PAGE);
@@ -228,6 +234,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Arc> getArcs() {
 		if (arcs == null) {
 			arcs = new EObjectContainmentWithInverseEList<Arc>(Arc.class, this, CpntoolsPackage.PAGE__ARCS, CpntoolsPackage.ARC__PAGE);
@@ -240,6 +247,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Binder getBinder() {
 		if (eContainerFeatureID() != CpntoolsPackage.PAGE__BINDER) return null;
 		return (Binder)eInternalContainer();
@@ -260,6 +268,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBinder(Binder newBinder) {
 		if (newBinder != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.PAGE__BINDER && newBinder != null)) {
 			if (EcoreUtil.isAncestor(this, newBinder))
@@ -281,6 +290,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void layout(final Integer width, final Integer height, final Integer steps) {
 		DirectedSparseGraph<DiagramElement, Arc> graph = new DirectedSparseGraph<DiagramElement, Arc>();
 		
@@ -362,6 +372,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void layout() {
 		int width = new Float(getBinder().getWidth() * 0.9).intValue();
 		int height = new Float(getBinder().getHeight() * 0.9).intValue();
@@ -584,7 +595,7 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

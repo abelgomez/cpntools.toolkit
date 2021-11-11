@@ -103,6 +103,7 @@ public class AuxBoxImpl extends AuxiliaryImpl implements AuxBox {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getHeight() {
 		return height;
 	}
@@ -112,6 +113,7 @@ public class AuxBoxImpl extends AuxiliaryImpl implements AuxBox {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeight(int newHeight) {
 		int oldHeight = height;
 		height = newHeight;
@@ -124,6 +126,7 @@ public class AuxBoxImpl extends AuxiliaryImpl implements AuxBox {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getWidth() {
 		return width;
 	}
@@ -133,6 +136,7 @@ public class AuxBoxImpl extends AuxiliaryImpl implements AuxBox {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWidth(int newWidth) {
 		int oldWidth = width;
 		width = newWidth;
@@ -217,7 +221,7 @@ public class AuxBoxImpl extends AuxiliaryImpl implements AuxBox {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (height: ");
 		result.append(height);
 		result.append(", width: ");

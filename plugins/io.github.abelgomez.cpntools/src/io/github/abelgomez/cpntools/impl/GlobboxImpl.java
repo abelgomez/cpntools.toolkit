@@ -107,6 +107,7 @@ public class GlobboxImpl extends MinimalEObjectImpl.Container implements Globbox
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Cpnet getCpnet() {
 		if (eContainerFeatureID() != CpntoolsPackage.GLOBBOX__CPNET) return null;
 		return (Cpnet)eInternalContainer();
@@ -127,6 +128,7 @@ public class GlobboxImpl extends MinimalEObjectImpl.Container implements Globbox
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCpnet(Cpnet newCpnet) {
 		if (newCpnet != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.GLOBBOX__CPNET && newCpnet != null)) {
 			if (EcoreUtil.isAncestor(this, newCpnet))
@@ -148,6 +150,7 @@ public class GlobboxImpl extends MinimalEObjectImpl.Container implements Globbox
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Declaration> getDeclarations() {
 		if (declarations == null) {
 			declarations = new EObjectContainmentWithInverseEList<Declaration>(Declaration.class, this, CpntoolsPackage.GLOBBOX__DECLARATIONS, CpntoolsPackage.DECLARATION__GLOBBOX);
@@ -160,6 +163,7 @@ public class GlobboxImpl extends MinimalEObjectImpl.Container implements Globbox
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -169,6 +173,7 @@ public class GlobboxImpl extends MinimalEObjectImpl.Container implements Globbox
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -314,7 +319,7 @@ public class GlobboxImpl extends MinimalEObjectImpl.Container implements Globbox
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

@@ -104,6 +104,7 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Fusion> getFusions() {
 		if (fusions == null) {
 			fusions = new EObjectContainmentWithInverseEList<Fusion>(Fusion.class, this, CpntoolsPackage.CPNET__FUSIONS, CpntoolsPackage.FUSION__CPNET);
@@ -116,6 +117,7 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Globbox getGlobbox() {
 		return globbox;
 	}
@@ -140,6 +142,7 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGlobbox(Globbox newGlobbox) {
 		if (newGlobbox != globbox) {
 			NotificationChain msgs = null;
@@ -159,6 +162,7 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Binder getBinder() {
 		return binder;
 	}
@@ -183,6 +187,7 @@ public class CpnetImpl extends MinimalEObjectImpl.Container implements Cpnet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBinder(Binder newBinder) {
 		if (newBinder != binder) {
 			NotificationChain msgs = null;

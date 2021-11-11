@@ -207,6 +207,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getHeight() {
 		return height;
 	}
@@ -216,6 +217,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeight(int newHeight) {
 		int oldHeight = height;
 		height = newHeight;
@@ -228,6 +230,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getWidth() {
 		return width;
 	}
@@ -237,6 +240,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWidth(int newWidth) {
 		int oldWidth = width;
 		width = newWidth;
@@ -249,6 +253,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isExplicit() {
 		return explicit;
 	}
@@ -258,6 +263,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExplicit(boolean newExplicit) {
 		boolean oldExplicit = explicit;
 		explicit = newExplicit;
@@ -270,6 +276,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransCond getCond() {
 		return cond;
 	}
@@ -294,6 +301,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCond(TransCond newCond) {
 		if (newCond != cond) {
 			NotificationChain msgs = null;
@@ -313,6 +321,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getPage() {
 		if (eContainerFeatureID() != CpntoolsPackage.TRANS__PAGE) return null;
 		return (Page)eInternalContainer();
@@ -333,6 +342,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPage(Page newPage) {
 		if (newPage != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.TRANS__PAGE && newPage != null)) {
 			if (EcoreUtil.isAncestor(this, newPage))
@@ -354,6 +364,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getText() {
 		return text;
 	}
@@ -363,6 +374,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(String newText) {
 		String oldText = text;
 		text = newText;
@@ -375,6 +387,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Arc> getArcs() {
 		if (arcs == null) {
 			arcs = new EObjectWithInverseResolvingEList<Arc>(Arc.class, this, CpntoolsPackage.TRANS__ARCS, CpntoolsPackage.ARC__TRANS);
@@ -387,6 +400,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransPriority getPriority() {
 		return priority;
 	}
@@ -411,6 +425,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPriority(TransPriority newPriority) {
 		if (newPriority != priority) {
 			NotificationChain msgs = null;
@@ -430,6 +445,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransTime getTime() {
 		return time;
 	}
@@ -454,6 +470,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTime(TransTime newTime) {
 		if (newTime != time) {
 			NotificationChain msgs = null;
@@ -672,7 +689,7 @@ public class TransImpl extends DiagramElementImpl implements Trans {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (height: ");
 		result.append(height);
 		result.append(", width: ");

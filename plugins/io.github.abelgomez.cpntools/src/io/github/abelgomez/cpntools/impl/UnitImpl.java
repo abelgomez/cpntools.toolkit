@@ -82,6 +82,7 @@ public class UnitImpl extends SimpleColorSetImpl implements Unit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getWith() {
 		return with;
 	}
@@ -91,6 +92,7 @@ public class UnitImpl extends SimpleColorSetImpl implements Unit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWith(String newWith) {
 		String oldWith = with;
 		with = newWith;
@@ -165,7 +167,7 @@ public class UnitImpl extends SimpleColorSetImpl implements Unit {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (with: ");
 		result.append(with);
 		result.append(')');

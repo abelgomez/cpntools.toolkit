@@ -82,6 +82,7 @@ public class GlobrefImpl extends DeclarationImpl implements Globref {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getIdname() {
 		return idname;
 	}
@@ -91,6 +92,7 @@ public class GlobrefImpl extends DeclarationImpl implements Globref {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdname(String newIdname) {
 		String oldIdname = idname;
 		idname = newIdname;
@@ -165,7 +167,7 @@ public class GlobrefImpl extends DeclarationImpl implements Globref {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (idname: ");
 		result.append(idname);
 		result.append(')');

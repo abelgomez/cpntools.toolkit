@@ -417,7 +417,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link CpntoolsPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -431,7 +431,8 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 		if (isInited) return (CpntoolsPackage)EPackage.Registry.INSTANCE.getEPackage(CpntoolsPackage.eNS_URI);
 
 		// Obtain or create and register package
-		CpntoolsPackageImpl theCpntoolsPackage = (CpntoolsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof CpntoolsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new CpntoolsPackageImpl());
+		Object registeredCpntoolsPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		CpntoolsPackageImpl theCpntoolsPackage = registeredCpntoolsPackage instanceof CpntoolsPackageImpl ? (CpntoolsPackageImpl)registeredCpntoolsPackage : new CpntoolsPackageImpl();
 
 		isInited = true;
 
@@ -444,7 +445,6 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 		// Mark meta-data to indicate it can't be changed
 		theCpntoolsPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(CpntoolsPackage.eNS_URI, theCpntoolsPackage);
 		return theCpntoolsPackage;
@@ -455,6 +455,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCpnet() {
 		return cpnetEClass;
 	}
@@ -464,6 +465,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCpnet_Fusions() {
 		return (EReference)cpnetEClass.getEStructuralFeatures().get(0);
 	}
@@ -473,6 +475,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCpnet_Globbox() {
 		return (EReference)cpnetEClass.getEStructuralFeatures().get(1);
 	}
@@ -482,6 +485,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCpnet_Binder() {
 		return (EReference)cpnetEClass.getEStructuralFeatures().get(2);
 	}
@@ -491,6 +495,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPage() {
 		return pageEClass;
 	}
@@ -500,6 +505,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPage_Group() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(0);
 	}
@@ -509,6 +515,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPage_Places() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(1);
 	}
@@ -518,6 +525,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPage_Auxiliarys() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(2);
 	}
@@ -527,6 +535,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPage_Name() {
 		return (EAttribute)pageEClass.getEStructuralFeatures().get(3);
 	}
@@ -536,6 +545,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPage_Transs() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(4);
 	}
@@ -545,6 +555,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPage_Arcs() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(5);
 	}
@@ -554,6 +565,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPage_Binder() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(6);
 	}
@@ -563,6 +575,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getPage__Layout__Integer_Integer_Integer() {
 		return pageEClass.getEOperations().get(0);
 	}
@@ -572,6 +585,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getPage__Layout() {
 		return pageEClass.getEOperations().get(1);
 	}
@@ -581,6 +595,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGroup() {
 		return groupEClass;
 	}
@@ -590,6 +605,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGroup_GroupElms() {
 		return (EReference)groupEClass.getEStructuralFeatures().get(0);
 	}
@@ -599,6 +615,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getGroup_Name() {
 		return (EAttribute)groupEClass.getEStructuralFeatures().get(1);
 	}
@@ -608,6 +625,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGroup_Page() {
 		return (EReference)groupEClass.getEStructuralFeatures().get(2);
 	}
@@ -617,6 +635,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDiagramElement() {
 		return diagramElementEClass;
 	}
@@ -626,6 +645,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDiagramElement_LineColour() {
 		return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -635,6 +655,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDiagramElement_FillFilled() {
 		return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(1);
 	}
@@ -644,6 +665,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDiagramElement_LineThick() {
 		return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(2);
 	}
@@ -653,6 +675,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDiagramElement_Posx() {
 		return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(3);
 	}
@@ -662,6 +685,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDiagramElement_LineType() {
 		return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(4);
 	}
@@ -671,6 +695,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDiagramElement_Posy() {
 		return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(5);
 	}
@@ -680,6 +705,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDiagramElement_FillColour() {
 		return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(6);
 	}
@@ -689,6 +715,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDiagramElement_FillPattern() {
 		return (EAttribute)diagramElementEClass.getEStructuralFeatures().get(7);
 	}
@@ -698,6 +725,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDiagramElement_Group() {
 		return (EReference)diagramElementEClass.getEStructuralFeatures().get(8);
 	}
@@ -707,6 +735,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPlace() {
 		return placeEClass;
 	}
@@ -716,6 +745,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPlace_Height() {
 		return (EAttribute)placeEClass.getEStructuralFeatures().get(0);
 	}
@@ -725,6 +755,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPlace_Width() {
 		return (EAttribute)placeEClass.getEStructuralFeatures().get(1);
 	}
@@ -734,6 +765,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlace_Type() {
 		return (EReference)placeEClass.getEStructuralFeatures().get(2);
 	}
@@ -743,6 +775,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlace_Initmark() {
 		return (EReference)placeEClass.getEStructuralFeatures().get(3);
 	}
@@ -752,6 +785,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlace_Port() {
 		return (EReference)placeEClass.getEStructuralFeatures().get(4);
 	}
@@ -761,6 +795,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlace_Fusion() {
 		return (EReference)placeEClass.getEStructuralFeatures().get(5);
 	}
@@ -770,6 +805,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlace_Page() {
 		return (EReference)placeEClass.getEStructuralFeatures().get(6);
 	}
@@ -779,6 +815,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPlace_Text() {
 		return (EAttribute)placeEClass.getEStructuralFeatures().get(7);
 	}
@@ -788,6 +825,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getPlace_Arcs() {
 		return (EReference)placeEClass.getEStructuralFeatures().get(8);
 	}
@@ -797,6 +835,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getColorSet() {
 		return colorSetEClass;
 	}
@@ -806,6 +845,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getColorSet_Idname() {
 		return (EAttribute)colorSetEClass.getEStructuralFeatures().get(0);
 	}
@@ -815,6 +855,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getColorSet_ColorSetType() {
 		return (EAttribute)colorSetEClass.getEStructuralFeatures().get(1);
 	}
@@ -824,6 +865,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getColorSet_Timed() {
 		return (EAttribute)colorSetEClass.getEStructuralFeatures().get(2);
 	}
@@ -833,6 +875,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getColorSet_Declare() {
 		return (EAttribute)colorSetEClass.getEStructuralFeatures().get(3);
 	}
@@ -842,6 +885,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDeclaration() {
 		return declarationEClass;
 	}
@@ -851,6 +895,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDeclaration_Globbox() {
 		return (EReference)declarationEClass.getEStructuralFeatures().get(0);
 	}
@@ -860,6 +905,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDeclaration_Block() {
 		return (EReference)declarationEClass.getEStructuralFeatures().get(1);
 	}
@@ -869,6 +915,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInitmark() {
 		return initmarkEClass;
 	}
@@ -878,6 +925,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInitmark_Expression() {
 		return (EAttribute)initmarkEClass.getEStructuralFeatures().get(0);
 	}
@@ -887,6 +935,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getPort() {
 		return portEClass;
 	}
@@ -896,6 +945,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getPort_PortType() {
 		return (EAttribute)portEClass.getEStructuralFeatures().get(0);
 	}
@@ -905,6 +955,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getFusion() {
 		return fusionEClass;
 	}
@@ -914,6 +965,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getFusion_Name() {
 		return (EAttribute)fusionEClass.getEStructuralFeatures().get(0);
 	}
@@ -923,6 +975,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFusion_Places() {
 		return (EReference)fusionEClass.getEStructuralFeatures().get(1);
 	}
@@ -932,6 +985,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getFusion_Cpnet() {
 		return (EReference)fusionEClass.getEStructuralFeatures().get(2);
 	}
@@ -941,6 +995,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAuxiliary() {
 		return auxiliaryEClass;
 	}
@@ -950,6 +1005,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAuxiliary_Page() {
 		return (EReference)auxiliaryEClass.getEStructuralFeatures().get(0);
 	}
@@ -959,6 +1015,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGlobbox() {
 		return globboxEClass;
 	}
@@ -968,6 +1025,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGlobbox_Cpnet() {
 		return (EReference)globboxEClass.getEStructuralFeatures().get(0);
 	}
@@ -977,6 +1035,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGlobbox_Declarations() {
 		return (EReference)globboxEClass.getEStructuralFeatures().get(1);
 	}
@@ -986,6 +1045,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getGlobbox_Name() {
 		return (EAttribute)globboxEClass.getEStructuralFeatures().get(2);
 	}
@@ -995,6 +1055,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVar() {
 		return varEClass;
 	}
@@ -1004,6 +1065,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVar_Idname() {
 		return (EAttribute)varEClass.getEStructuralFeatures().get(0);
 	}
@@ -1013,6 +1075,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getVar_Type() {
 		return (EReference)varEClass.getEStructuralFeatures().get(1);
 	}
@@ -1022,6 +1085,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGlobref() {
 		return globrefEClass;
 	}
@@ -1031,6 +1095,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getGlobref_Idname() {
 		return (EAttribute)globrefEClass.getEStructuralFeatures().get(0);
 	}
@@ -1040,6 +1105,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMl() {
 		return mlEClass;
 	}
@@ -1049,6 +1115,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMl_Expression() {
 		return (EAttribute)mlEClass.getEStructuralFeatures().get(0);
 	}
@@ -1058,6 +1125,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBlock() {
 		return blockEClass;
 	}
@@ -1067,6 +1135,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBlock_Idname() {
 		return (EAttribute)blockEClass.getEStructuralFeatures().get(0);
 	}
@@ -1076,6 +1145,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBlock_Declarations() {
 		return (EReference)blockEClass.getEStructuralFeatures().get(1);
 	}
@@ -1085,6 +1155,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAuxText() {
 		return auxTextEClass;
 	}
@@ -1094,6 +1165,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuxText_Text() {
 		return (EAttribute)auxTextEClass.getEStructuralFeatures().get(0);
 	}
@@ -1103,6 +1175,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArc() {
 		return arcEClass;
 	}
@@ -1112,6 +1185,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArc_Headsize() {
 		return (EAttribute)arcEClass.getEStructuralFeatures().get(0);
 	}
@@ -1121,6 +1195,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArc_Place() {
 		return (EReference)arcEClass.getEStructuralFeatures().get(1);
 	}
@@ -1130,6 +1205,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArc_Orientation() {
 		return (EAttribute)arcEClass.getEStructuralFeatures().get(2);
 	}
@@ -1139,6 +1215,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArc_Currentcyckle() {
 		return (EAttribute)arcEClass.getEStructuralFeatures().get(3);
 	}
@@ -1148,6 +1225,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArc_Order() {
 		return (EAttribute)arcEClass.getEStructuralFeatures().get(4);
 	}
@@ -1157,6 +1235,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArc_Trans() {
 		return (EReference)arcEClass.getEStructuralFeatures().get(5);
 	}
@@ -1166,6 +1245,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArc_Annot() {
 		return (EReference)arcEClass.getEStructuralFeatures().get(6);
 	}
@@ -1175,6 +1255,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getArc_Page() {
 		return (EReference)arcEClass.getEStructuralFeatures().get(7);
 	}
@@ -1184,6 +1265,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTrans() {
 		return transEClass;
 	}
@@ -1193,6 +1275,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTrans_Height() {
 		return (EAttribute)transEClass.getEStructuralFeatures().get(0);
 	}
@@ -1202,6 +1285,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTrans_Width() {
 		return (EAttribute)transEClass.getEStructuralFeatures().get(1);
 	}
@@ -1211,6 +1295,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTrans_Explicit() {
 		return (EAttribute)transEClass.getEStructuralFeatures().get(2);
 	}
@@ -1220,6 +1305,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTrans_Cond() {
 		return (EReference)transEClass.getEStructuralFeatures().get(3);
 	}
@@ -1229,6 +1315,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTrans_Page() {
 		return (EReference)transEClass.getEStructuralFeatures().get(4);
 	}
@@ -1238,6 +1325,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTrans_Text() {
 		return (EAttribute)transEClass.getEStructuralFeatures().get(5);
 	}
@@ -1247,6 +1335,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTrans_Arcs() {
 		return (EReference)transEClass.getEStructuralFeatures().get(6);
 	}
@@ -1256,6 +1345,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTrans_Priority() {
 		return (EReference)transEClass.getEStructuralFeatures().get(7);
 	}
@@ -1265,6 +1355,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getTrans_Time() {
 		return (EReference)transEClass.getEStructuralFeatures().get(8);
 	}
@@ -1274,6 +1365,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransCond() {
 		return transCondEClass;
 	}
@@ -1283,6 +1375,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTransCond_Text() {
 		return (EAttribute)transCondEClass.getEStructuralFeatures().get(0);
 	}
@@ -1292,6 +1385,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransPriority() {
 		return transPriorityEClass;
 	}
@@ -1301,6 +1395,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTransPriority_Text() {
 		return (EAttribute)transPriorityEClass.getEStructuralFeatures().get(0);
 	}
@@ -1310,6 +1405,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTransTime() {
 		return transTimeEClass;
 	}
@@ -1319,6 +1415,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getTransTime_Text() {
 		return (EAttribute)transTimeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1328,6 +1425,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAnnot() {
 		return annotEClass;
 	}
@@ -1337,6 +1435,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAnnot_Text() {
 		return (EAttribute)annotEClass.getEStructuralFeatures().get(0);
 	}
@@ -1346,6 +1445,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAuxEllipse() {
 		return auxEllipseEClass;
 	}
@@ -1355,6 +1455,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuxEllipse_Height() {
 		return (EAttribute)auxEllipseEClass.getEStructuralFeatures().get(0);
 	}
@@ -1364,6 +1465,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuxEllipse_Width() {
 		return (EAttribute)auxEllipseEClass.getEStructuralFeatures().get(1);
 	}
@@ -1373,6 +1475,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAuxBox() {
 		return auxBoxEClass;
 	}
@@ -1382,6 +1485,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuxBox_Height() {
 		return (EAttribute)auxBoxEClass.getEStructuralFeatures().get(0);
 	}
@@ -1391,6 +1495,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAuxBox_Width() {
 		return (EAttribute)auxBoxEClass.getEStructuralFeatures().get(1);
 	}
@@ -1400,6 +1505,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSimpleColorSet() {
 		return simpleColorSetEClass;
 	}
@@ -1409,6 +1515,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCompoundColorSet() {
 		return compoundColorSetEClass;
 	}
@@ -1418,6 +1525,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCompoundColorSet_SimpleColors() {
 		return (EReference)compoundColorSetEClass.getEStructuralFeatures().get(0);
 	}
@@ -1427,6 +1535,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnit() {
 		return unitEClass;
 	}
@@ -1436,6 +1545,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnit_With() {
 		return (EAttribute)unitEClass.getEStructuralFeatures().get(0);
 	}
@@ -1445,6 +1555,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBoolean() {
 		return booleanEClass;
 	}
@@ -1454,6 +1565,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBoolean_With() {
 		return (EAttribute)booleanEClass.getEStructuralFeatures().get(0);
 	}
@@ -1463,6 +1575,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInteger() {
 		return integerEClass;
 	}
@@ -1472,6 +1585,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInteger_With() {
 		return (EAttribute)integerEClass.getEStructuralFeatures().get(0);
 	}
@@ -1481,6 +1595,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLargeInteger() {
 		return largeIntegerEClass;
 	}
@@ -1490,6 +1605,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLargeInteger_With() {
 		return (EAttribute)largeIntegerEClass.getEStructuralFeatures().get(0);
 	}
@@ -1499,6 +1615,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getReal() {
 		return realEClass;
 	}
@@ -1508,6 +1625,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getReal_With() {
 		return (EAttribute)realEClass.getEStructuralFeatures().get(0);
 	}
@@ -1517,6 +1635,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getTime() {
 		return timeEClass;
 	}
@@ -1526,6 +1645,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getString() {
 		return stringEClass;
 	}
@@ -1535,6 +1655,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getString_With() {
 		return (EAttribute)stringEClass.getEStructuralFeatures().get(0);
 	}
@@ -1544,6 +1665,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getString_And() {
 		return (EAttribute)stringEClass.getEStructuralFeatures().get(1);
 	}
@@ -1553,6 +1675,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEnumerated() {
 		return enumeratedEClass;
 	}
@@ -1562,6 +1685,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getEnumerated_With() {
 		return (EAttribute)enumeratedEClass.getEStructuralFeatures().get(0);
 	}
@@ -1571,6 +1695,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIndex() {
 		return indexEClass;
 	}
@@ -1580,6 +1705,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getIndex_With() {
 		return (EAttribute)indexEClass.getEStructuralFeatures().get(0);
 	}
@@ -1589,6 +1715,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getProduct() {
 		return productEClass;
 	}
@@ -1598,6 +1725,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRecord() {
 		return recordEClass;
 	}
@@ -1607,6 +1735,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getList() {
 		return listEClass;
 	}
@@ -1616,6 +1745,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnion() {
 		return unionEClass;
 	}
@@ -1625,6 +1755,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSubset() {
 		return subsetEClass;
 	}
@@ -1634,6 +1765,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAlias() {
 		return aliasEClass;
 	}
@@ -1643,6 +1775,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBinder() {
 		return binderEClass;
 	}
@@ -1652,6 +1785,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBinder_Posy() {
 		return (EAttribute)binderEClass.getEStructuralFeatures().get(0);
 	}
@@ -1661,6 +1795,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBinder_Posx() {
 		return (EAttribute)binderEClass.getEStructuralFeatures().get(1);
 	}
@@ -1670,6 +1805,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBinder_Width() {
 		return (EAttribute)binderEClass.getEStructuralFeatures().get(2);
 	}
@@ -1679,6 +1815,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBinder_Height() {
 		return (EAttribute)binderEClass.getEStructuralFeatures().get(3);
 	}
@@ -1688,6 +1825,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBinder_Cpnet() {
 		return (EReference)binderEClass.getEStructuralFeatures().get(4);
 	}
@@ -1697,6 +1835,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getBinder_Pages() {
 		return (EReference)binderEClass.getEStructuralFeatures().get(5);
 	}
@@ -1706,6 +1845,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getOrientation() {
 		return orientationEEnum;
 	}
@@ -1715,6 +1855,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getColour16() {
 		return colour16EEnum;
 	}
@@ -1724,6 +1865,7 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CpntoolsFactory getCpntoolsFactory() {
 		return (CpntoolsFactory)getEFactoryInstance();
 	}
@@ -2226,12 +2368,12 @@ public class CpntoolsPackageImpl extends EPackageImpl implements CpntoolsPackage
 	 * @generated
 	 */
 	protected void createArchetypeAnnotations() {
-		String source = "http://www.obeo.fr/dsl/dnc/archetype";	
+		String source = "http://www.obeo.fr/dsl/dnc/archetype";
 		addAnnotation
-		  (globboxEClass, 
-		   source, 
+		  (globboxEClass,
+		   source,
 		   new String[] {
-			 "archetype", "Description"
+			   "archetype", "Description"
 		   });
 	}
 

@@ -189,6 +189,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public float getHeadsize() {
 		return headsize;
 	}
@@ -198,6 +199,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeadsize(float newHeadsize) {
 		float oldHeadsize = headsize;
 		headsize = newHeadsize;
@@ -210,6 +212,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Place getPlace() {
 		if (place != null && place.eIsProxy()) {
 			InternalEObject oldPlace = (InternalEObject)place;
@@ -251,6 +254,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPlace(Place newPlace) {
 		if (newPlace != place) {
 			NotificationChain msgs = null;
@@ -270,6 +274,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Orientation getOrientation() {
 		return orientation;
 	}
@@ -279,6 +284,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrientation(Orientation newOrientation) {
 		Orientation oldOrientation = orientation;
 		orientation = newOrientation == null ? ORIENTATION_EDEFAULT : newOrientation;
@@ -291,6 +297,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCurrentcyckle() {
 		return currentcyckle;
 	}
@@ -300,6 +307,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCurrentcyckle(String newCurrentcyckle) {
 		String oldCurrentcyckle = currentcyckle;
 		currentcyckle = newCurrentcyckle;
@@ -312,6 +320,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getOrder() {
 		return order;
 	}
@@ -321,6 +330,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrder(int newOrder) {
 		int oldOrder = order;
 		order = newOrder;
@@ -333,6 +343,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trans getTrans() {
 		if (trans != null && trans.eIsProxy()) {
 			InternalEObject oldTrans = (InternalEObject)trans;
@@ -374,6 +385,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTrans(Trans newTrans) {
 		if (newTrans != trans) {
 			NotificationChain msgs = null;
@@ -393,6 +405,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Annot getAnnot() {
 		return annot;
 	}
@@ -417,6 +430,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAnnot(Annot newAnnot) {
 		if (newAnnot != annot) {
 			NotificationChain msgs = null;
@@ -436,6 +450,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getPage() {
 		if (eContainerFeatureID() != CpntoolsPackage.ARC__PAGE) return null;
 		return (Page)eInternalContainer();
@@ -456,6 +471,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPage(Page newPage) {
 		if (newPage != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.ARC__PAGE && newPage != null)) {
 			if (EcoreUtil.isAncestor(this, newPage))
@@ -669,7 +685,7 @@ public class ArcImpl extends DiagramElementImpl implements Arc {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (headsize: ");
 		result.append(headsize);
 		result.append(", orientation: ");

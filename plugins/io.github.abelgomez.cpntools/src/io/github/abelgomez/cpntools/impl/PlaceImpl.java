@@ -197,6 +197,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getHeight() {
 		return height;
 	}
@@ -206,6 +207,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHeight(int newHeight) {
 		int oldHeight = height;
 		height = newHeight;
@@ -218,6 +220,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getWidth() {
 		return width;
 	}
@@ -227,6 +230,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWidth(int newWidth) {
 		int oldWidth = width;
 		width = newWidth;
@@ -239,6 +243,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ColorSet getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
@@ -265,6 +270,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(ColorSet newType) {
 		ColorSet oldType = type;
 		type = newType;
@@ -277,6 +283,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Initmark getInitmark() {
 		return initmark;
 	}
@@ -301,6 +308,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInitmark(Initmark newInitmark) {
 		if (newInitmark != initmark) {
 			NotificationChain msgs = null;
@@ -320,6 +328,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Port getPort() {
 		return port;
 	}
@@ -344,6 +353,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPort(Port newPort) {
 		if (newPort != port) {
 			NotificationChain msgs = null;
@@ -363,6 +373,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Fusion getFusion() {
 		if (fusion != null && fusion.eIsProxy()) {
 			InternalEObject oldFusion = (InternalEObject)fusion;
@@ -404,6 +415,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFusion(Fusion newFusion) {
 		if (newFusion != fusion) {
 			NotificationChain msgs = null;
@@ -423,6 +435,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Page getPage() {
 		if (eContainerFeatureID() != CpntoolsPackage.PLACE__PAGE) return null;
 		return (Page)eInternalContainer();
@@ -443,6 +456,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPage(Page newPage) {
 		if (newPage != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.PLACE__PAGE && newPage != null)) {
 			if (EcoreUtil.isAncestor(this, newPage))
@@ -464,6 +478,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getText() {
 		return text;
 	}
@@ -473,6 +488,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setText(String newText) {
 		String oldText = text;
 		text = newText;
@@ -485,6 +501,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Arc> getArcs() {
 		if (arcs == null) {
 			arcs = new EObjectWithInverseResolvingEList<Arc>(Arc.class, this, CpntoolsPackage.PLACE__ARCS, CpntoolsPackage.ARC__PLACE);
@@ -702,7 +719,7 @@ public class PlaceImpl extends DiagramElementImpl implements Place {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (height: ");
 		result.append(height);
 		result.append(", width: ");

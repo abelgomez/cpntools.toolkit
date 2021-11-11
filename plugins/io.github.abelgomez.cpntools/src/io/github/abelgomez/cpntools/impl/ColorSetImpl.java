@@ -146,6 +146,7 @@ public abstract class ColorSetImpl extends DeclarationImpl implements ColorSet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getIdname() {
 		return idname;
 	}
@@ -155,6 +156,7 @@ public abstract class ColorSetImpl extends DeclarationImpl implements ColorSet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdname(String newIdname) {
 		String oldIdname = idname;
 		idname = newIdname;
@@ -167,6 +169,7 @@ public abstract class ColorSetImpl extends DeclarationImpl implements ColorSet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getColorSetType() {
 		return colorSetType;
 	}
@@ -176,6 +179,7 @@ public abstract class ColorSetImpl extends DeclarationImpl implements ColorSet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setColorSetType(String newColorSetType) {
 		String oldColorSetType = colorSetType;
 		colorSetType = newColorSetType;
@@ -188,6 +192,7 @@ public abstract class ColorSetImpl extends DeclarationImpl implements ColorSet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTimed() {
 		return timed;
 	}
@@ -197,6 +202,7 @@ public abstract class ColorSetImpl extends DeclarationImpl implements ColorSet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTimed(boolean newTimed) {
 		boolean oldTimed = timed;
 		timed = newTimed;
@@ -209,6 +215,7 @@ public abstract class ColorSetImpl extends DeclarationImpl implements ColorSet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDeclare() {
 		return declare;
 	}
@@ -218,6 +225,7 @@ public abstract class ColorSetImpl extends DeclarationImpl implements ColorSet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeclare(String newDeclare) {
 		String oldDeclare = declare;
 		declare = newDeclare;
@@ -322,7 +330,7 @@ public abstract class ColorSetImpl extends DeclarationImpl implements ColorSet {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (idname: ");
 		result.append(idname);
 		result.append(", colorSetType: ");

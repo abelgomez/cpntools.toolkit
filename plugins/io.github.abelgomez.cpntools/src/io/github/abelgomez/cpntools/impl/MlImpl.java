@@ -82,6 +82,7 @@ public class MlImpl extends DeclarationImpl implements Ml {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getExpression() {
 		return expression;
 	}
@@ -91,6 +92,7 @@ public class MlImpl extends DeclarationImpl implements Ml {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpression(String newExpression) {
 		String oldExpression = expression;
 		expression = newExpression;
@@ -165,7 +167,7 @@ public class MlImpl extends DeclarationImpl implements Ml {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (expression: ");
 		result.append(expression);
 		result.append(')');

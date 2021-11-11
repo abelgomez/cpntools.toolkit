@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2016 Abel Gómez.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    Abel Gómez - initial API and implementation"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2021 Abel Gómez.&#xA;&#xA;This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License 2.0&#xA;which accompanies this distribution, and is available at&#xA;https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;    Abel Gómez (abgolla@gmail.com) - initial API and implementation"
     modelDirectory="/io.github.abelgomez.cpntools/src" modelPluginID="io.github.abelgomez.cpntools"
     modelName="Cpntools" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
@@ -12,30 +12,45 @@
       <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Orientation/undefined"/>
       <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Orientation/PtoT"/>
       <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Orientation/TtoP"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Orientation/Inhibitor"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cpntools.ecore#//Colour16">
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Aqua"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Black"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Blue"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Fuchsia"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Gray"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Green"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Lime"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Maroon"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Navy"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Olive"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Purple"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Red"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Silver"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Teal"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/White"/>
+      <genEnumLiterals ecoreEnumLiteral="cpntools.ecore#//Colour16/Yellow"/>
     </genEnums>
     <genClasses ecoreClass="cpntools.ecore#//Cpnet">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cpntools.ecore#//Cpnet/fusions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cpntools.ecore#//Cpnet/globbox"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cpntools.ecore#//Cpnet/page"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cpntools.ecore#//Cpnet/binder"/>
     </genClasses>
     <genClasses ecoreClass="cpntools.ecore#//Page">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cpntools.ecore#//Page/group"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cpntools.ecore#//Page/places"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cpntools.ecore#//Page/auxiliarys"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cpntools.ecore#//Page/name"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cpntools.ecore#//Page/cpnet"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cpntools.ecore#//Page/transs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cpntools.ecore#//Page/arcs"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cpntools.ecore#//Page/posx"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cpntools.ecore#//Page/posy"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cpntools.ecore#//Page/width"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cpntools.ecore#//Page/height"/>
-      <genOperations ecoreOperation="cpntools.ecore#//Page/layout">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cpntools.ecore#//Page/binder"/>
+      <genOperations ecoreOperation="cpntools.ecore#//Page/layout" body="DirectedSparseGraph&lt;DiagramElement, Arc> graph = new DirectedSparseGraph&lt;DiagramElement, Arc>();&#xD;&#xA;&#xD;&#xA;for (Arc arc : this.getArcs()) {&#xD;&#xA;&#x9;graph.addVertex(arc.getPlace());&#xD;&#xA;&#x9;graph.addVertex(arc.getTrans());&#xD;&#xA;&#xD;&#xA;&#x9;Pair&lt;DiagramElement> pair = null;&#xD;&#xA;&#x9;if (arc.getOrientation() == Orientation.TTO_P) {&#xD;&#xA;&#x9;&#x9;pair = new Pair&lt;DiagramElement>(arc.getTrans(), arc.getPlace());&#xD;&#xA;&#x9;} else {&#xD;&#xA;&#x9;&#x9;pair = new Pair&lt;DiagramElement>(arc.getPlace(), arc.getTrans());&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;graph.addEdge(arc, pair);&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;KKLayout&lt;DiagramElement, Arc> layout = new KKLayout&lt;DiagramElement, Arc>(graph);&#xD;&#xA;layout.setSize(new Dimension(width, height));&#xD;&#xA;layout.setLengthFactor(1.5);&#xD;&#xA;layout.initialize();&#xD;&#xA;&#xD;&#xA;layout.setMaxIterations(steps);&#xD;&#xA;&#xD;&#xA;while (!layout.done()) {&#xD;&#xA;&#x9;layout.step();&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;for (DiagramElement element : graph.getVertices()) {&#xD;&#xA;&#x9;int x = (int) layout.getX(element) - (width / 2);&#xD;&#xA;&#x9;int y = (int) layout.getY(element) - (height / 2);&#xD;&#xA;&#xD;&#xA;&#x9;element.setPosx(x);&#xD;&#xA;&#x9;element.setPosy(y);&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if (element instanceof Trans) {&#xD;&#xA;&#x9;&#x9;Trans trans = (Trans) element;&#xD;&#xA;&#x9;&#x9;if (trans.getCond() != null) {&#xD;&#xA;&#x9;&#x9;&#x9;trans.getCond().setPosx(x - 40);&#xD;&#xA;&#x9;&#x9;&#x9;trans.getCond().setPosy(y + 30);&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;if (trans.getPriority() != null) {&#xD;&#xA;&#x9;&#x9;&#x9;trans.getPriority().setPosx(x - 40);&#xD;&#xA;&#x9;&#x9;&#x9;trans.getPriority().setPosy(y - 30);&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;if (trans.getTime() != null) {&#xD;&#xA;&#x9;&#x9;&#x9;trans.getTime().setPosx(x + 40);&#xD;&#xA;&#x9;&#x9;&#x9;trans.getTime().setPosy(y - 30);&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;for (Arc arc : this.getArcs()) {&#xD;&#xA;&#x9;// We must retrieve the edges in this cumbersome way since some arcs may &#xD;&#xA;&#x9;// be omitted because they contain the same source and target nodes&#xD;&#xA;&#x9;Arc edge = null;&#xD;&#xA;&#x9;if (arc.getOrientation() == Orientation.TTO_P) {&#xD;&#xA;&#x9;&#x9;edge = graph.findEdge(arc.getTrans(), arc.getPlace());&#xD;&#xA;&#x9;} else {&#xD;&#xA;&#x9;&#x9;edge = graph.findEdge(arc.getPlace(), arc.getTrans());&#xD;&#xA;&#x9;};&#xD;&#xA;&#x9;DiagramElement source = graph.getSource(edge);&#xD;&#xA;&#x9;DiagramElement target = graph.getDest(edge);&#xD;&#xA;&#xD;&#xA;&#x9;int sourceX = (int) layout.getX(source) - (width / 2);&#xD;&#xA;&#x9;int sourceY = (int) layout.getY(source) - (height / 2);&#xD;&#xA;&#x9;int targetX = (int) layout.getX(target) - (width / 2);&#xD;&#xA;&#x9;int targetY = (int) layout.getY(target) - (height / 2);&#xD;&#xA;&#xD;&#xA;&#x9;if (arc.getAnnot() != null) {&#xD;&#xA;&#x9;&#x9;double pos = ThreadLocalRandom.current().nextDouble(0.35, 0.65); &#xD;&#xA;&#x9;&#x9;arc.getAnnot().setPosx(sourceX + (int) ((targetX - sourceX) * pos));&#xD;&#xA;&#x9;&#x9;arc.getAnnot().setPosy(sourceY + (int) ((targetY - sourceY) * pos));&#xD;&#xA;&#x9;}&#xD;&#xA;}">
         <genParameters ecoreParameter="cpntools.ecore#//Page/layout/width"/>
         <genParameters ecoreParameter="cpntools.ecore#//Page/layout/height"/>
         <genParameters ecoreParameter="cpntools.ecore#//Page/layout/steps"/>
       </genOperations>
-      <genOperations ecoreOperation="cpntools.ecore#//Page/layout.1"/>
+      <genOperations ecoreOperation="cpntools.ecore#//Page/layout.1" body="int width = new Float(getBinder().getWidth() * 0.9).intValue();&#xD;&#xA;int height = new Float(getBinder().getHeight() * 0.9).intValue();&#xD;&#xA;layout(width, height, 5000);"/>
     </genClasses>
     <genClasses ecoreClass="cpntools.ecore#//Group">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cpntools.ecore#//Group/groupElms"/>
@@ -187,5 +202,13 @@
     <genClasses ecoreClass="cpntools.ecore#//Union"/>
     <genClasses ecoreClass="cpntools.ecore#//Subset"/>
     <genClasses ecoreClass="cpntools.ecore#//Alias"/>
+    <genClasses ecoreClass="cpntools.ecore#//Binder">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cpntools.ecore#//Binder/posy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cpntools.ecore#//Binder/posx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cpntools.ecore#//Binder/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cpntools.ecore#//Binder/height"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cpntools.ecore#//Binder/cpnet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cpntools.ecore#//Binder/pages"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

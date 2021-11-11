@@ -107,6 +107,7 @@ public class FusionImpl extends MinimalEObjectImpl.Container implements Fusion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -116,6 +117,7 @@ public class FusionImpl extends MinimalEObjectImpl.Container implements Fusion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -128,6 +130,7 @@ public class FusionImpl extends MinimalEObjectImpl.Container implements Fusion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Place> getPlaces() {
 		if (places == null) {
 			places = new EObjectWithInverseResolvingEList<Place>(Place.class, this, CpntoolsPackage.FUSION__PLACES, CpntoolsPackage.PLACE__FUSION);
@@ -140,6 +143,7 @@ public class FusionImpl extends MinimalEObjectImpl.Container implements Fusion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Cpnet getCpnet() {
 		if (eContainerFeatureID() != CpntoolsPackage.FUSION__CPNET) return null;
 		return (Cpnet)eInternalContainer();
@@ -160,6 +164,7 @@ public class FusionImpl extends MinimalEObjectImpl.Container implements Fusion {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCpnet(Cpnet newCpnet) {
 		if (newCpnet != eInternalContainer() || (eContainerFeatureID() != CpntoolsPackage.FUSION__CPNET && newCpnet != null)) {
 			if (EcoreUtil.isAncestor(this, newCpnet))
@@ -314,7 +319,7 @@ public class FusionImpl extends MinimalEObjectImpl.Container implements Fusion {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

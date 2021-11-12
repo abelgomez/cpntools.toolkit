@@ -32,6 +32,8 @@ See a full example in the [`pom.xml`](pom.xml) file.
 
 ## Building and running the example project
 
+> **PLEASE NOTE that the following maven commands must be executed inside THIS directory, which is built independently of the maven project at the root**
+
 To compile the example run
 
 ```bash

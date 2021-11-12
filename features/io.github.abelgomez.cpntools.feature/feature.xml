@@ -15,7 +15,7 @@
 <feature
       id="io.github.abelgomez.cpntools.feature"
       label="CPN Tools Support"
-      version="0.4.0.qualifier"
+      version="0.5.0.qualifier"
       provider-name="Abel Gómez">
 
    <description url="https://github.com/abelgomez/cpntools.toolkit">
@@ -125,14 +125,14 @@ This Agreement is governed by the laws of the State of New York and the intellec
          id="io.github.abelgomez.cpntools"
          download-size="0"
          install-size="0"
-         version="0.4.0.qualifier"
+         version="0.5.0.qualifier"
          unpack="false"/>
 
    <plugin
          id="io.github.abelgomez.cpntools.io"
          download-size="0"
          install-size="0"
-         version="0.4.0.qualifier"
+         version="0.5.0.qualifier"
          unpack="false"/>
 
 </feature>

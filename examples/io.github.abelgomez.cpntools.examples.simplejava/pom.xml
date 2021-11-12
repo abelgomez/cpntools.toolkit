@@ -14,7 +14,7 @@
 	<repositories>
 		<repository>
 			<id>local-maven-repo</id>
-			<url>file:///Users/agomez/Git/cpntools.toolkit/repository.out</url>
+			<url>https://abelgomez.github.io/cpntools.toolkit/repository/</url>
 		</repository>
 	</repositories>
 	<dependencies>
@@ -32,15 +32,18 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<archive>
-						<manifest>
-							<mainClass>io.github.abelgomez.cpntools.examples.simplejava.App</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

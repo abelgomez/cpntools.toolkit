@@ -26,8 +26,5 @@
 	<modules>
 		<module>io.github.abelgomez.cpntools</module>
 		<module>io.github.abelgomez.cpntools.io</module>
-		<module>net.sf.jung.jung-api</module>
-		<module>net.sf.jung.jung-algorithms</module>
-		<module>net.sf.jung.jung-graph-impl</module>
 	</modules>
 </project>

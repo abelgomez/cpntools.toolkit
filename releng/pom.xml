@@ -26,5 +26,6 @@
 	<modules>
 		<module>platform</module>
 		<module>update</module>
+		<module>update.dependencies</module>
 	</modules>
 </project>

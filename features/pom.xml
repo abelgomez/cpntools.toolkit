@@ -26,5 +26,6 @@
 	<modules>
 		<module>io.github.abelgomez.cpntools.feature</module>
 		<module>io.github.abelgomez.cpntools.sdk.feature</module>
+		<module>net.sf.jung.feature</module>
 	</modules>
 </project>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?compositeMetadataRepository version='1.0.0'?>
+<repository name='CPN Tools Toolkit Composite Update Site' type='org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1636723251859'/>
+    <property name='p2.atomic.composite.loading' value='true'/>
+  </properties>
+  <children size='3'>
+    <child location='https://abelgomez.github.io/cpntools.toolkit/updates/0.5.0/'/>
+    <child location='https://abelgomez.github.io/cpntools.toolkit/updates/legacy/'/>
+  </children>
+</repository>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='io.github.abelgomez.cpntools' version='0.5.0.202111122209' generation='2'>
+    <update id='io.github.abelgomez.cpntools' range='[0.0.0,0.5.0.202111122209)' severity='0'/>
+    <properties size='8'>
+      <property name='df_LT.pluginName' value='CPN Tools Metamodel Plug-in'/>
+      <property name='df_LT.providerName' value='Abel Gómez'/>
+      <property name='org.eclipse.equinox.p2.name' value='%pluginName'/>
+      <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
+      <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      <property name='maven-groupId' value='io.github.abelgomez.cpntools'/>
+      <property name='maven-artifactId' value='io.github.abelgomez.cpntools'/>
+      <property name='maven-version' value='0.5.0-SNAPSHOT'/>
+    </properties>
+    <provides size='8'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='io.github.abelgomez.cpntools' version='0.5.0.202111122209'/>
+      <provided namespace='osgi.bundle' name='io.github.abelgomez.cpntools' version='0.5.0.202111122209'/>
+      <provided namespace='java.package' name='io.github.abelgomez.cpntools' version='0.0.0'/>
+      <provided namespace='java.package' name='io.github.abelgomez.cpntools.impl' version='0.0.0'/>
+      <provided namespace='java.package' name='io.github.abelgomez.cpntools.util' version='0.0.0'/>
+      <provided namespace='osgi.identity' name='io.github.abelgomez.cpntools' version='0.5.0.202111122209'>
+        <properties size='1'>
+          <property name='type' value='osgi.bundle'/>
+        </properties>
+      </provided>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+    </provides>
+    <requires size='5'>
+      <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.12.0'/>
+      <required namespace='osgi.bundle' name='org.eclipse.emf.ecore' range='2.12.0'/>
+      <required namespace='osgi.bundle' name='net.sf.jung.jung-algorithms' range='2.1.1'/>
+      <required namespace='osgi.bundle' name='net.sf.jung.jung-graph-impl' range='2.1.1'/>
+      <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+        <description>
+          io.github.abelgomez.cpntools
+        </description>
+      </requiredProperties>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='io.github.abelgomez.cpntools' version='0.5.0.202111122209'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: io.github.abelgomez.cpntools;singleton:=true&#xA;Bundle-Version: 0.5.0.202111122209&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

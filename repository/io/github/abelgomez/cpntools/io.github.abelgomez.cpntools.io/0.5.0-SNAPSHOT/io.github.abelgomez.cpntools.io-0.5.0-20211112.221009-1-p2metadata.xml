@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<units size='1'>
+  <unit id='io.github.abelgomez.cpntools.io' version='0.5.0.202111122209' singleton='false' generation='2'>
+    <update id='io.github.abelgomez.cpntools.io' range='[0.0.0,0.5.0.202111122209)' severity='0'/>
+    <properties size='5'>
+      <property name='org.eclipse.equinox.p2.name' value='CPN Tools I/O Plug-in'/>
+      <property name='org.eclipse.equinox.p2.provider' value='Abel Gómez'/>
+      <property name='maven-groupId' value='io.github.abelgomez.cpntools'/>
+      <property name='maven-artifactId' value='io.github.abelgomez.cpntools.io'/>
+      <property name='maven-version' value='0.5.0-SNAPSHOT'/>
+    </properties>
+    <provides size='5'>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='io.github.abelgomez.cpntools.io' version='0.5.0.202111122209'/>
+      <provided namespace='osgi.bundle' name='io.github.abelgomez.cpntools.io' version='0.5.0.202111122209'/>
+      <provided namespace='java.package' name='io.github.abelgomez.cpntools.io.serializer' version='0.0.0'/>
+      <provided namespace='osgi.identity' name='io.github.abelgomez.cpntools.io' version='0.5.0.202111122209'>
+        <properties size='1'>
+          <property name='type' value='osgi.bundle'/>
+        </properties>
+      </provided>
+      <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+    </provides>
+    <requires size='2'>
+      <required namespace='osgi.bundle' name='io.github.abelgomez.cpntools' range='0.5.0'/>
+      <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+        <description>
+          io.github.abelgomez.cpntools.io
+        </description>
+      </requiredProperties>
+    </requires>
+    <artifacts size='1'>
+      <artifact classifier='osgi.bundle' id='io.github.abelgomez.cpntools.io' version='0.5.0.202111122209'/>
+    </artifacts>
+    <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+    <touchpointData size='1'>
+      <instructions size='1'>
+        <instruction key='manifest'>
+          Bundle-SymbolicName: io.github.abelgomez.cpntools.io&#xA;Bundle-Version: 0.5.0.202111122209&#xA;
+        </instruction>
+      </instructions>
+    </touchpointData>
+  </unit>
+</units>

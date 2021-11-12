@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<artifacts size='1'>
+  <artifact classifier='osgi.bundle' id='io.github.abelgomez.cpntools.io' version='0.5.0.202111122209'>
+    <properties size='5'>
+      <property name='artifact.size' value='13030'/>
+      <property name='download.size' value='13030'/>
+      <property name='maven-groupId' value='io.github.abelgomez.cpntools'/>
+      <property name='maven-artifactId' value='io.github.abelgomez.cpntools.io'/>
+      <property name='maven-version' value='0.5.0-SNAPSHOT'/>
+    </properties>
+  </artifact>
+</artifacts>

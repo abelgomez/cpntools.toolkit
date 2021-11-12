@@ -13,7 +13,7 @@
 	</properties>
 	<repositories>
 		<repository>
-			<id>local-maven-repo</id>
+			<id>cpntools-toolkit-maven-repo</id>
 			<url>https://abelgomez.github.io/cpntools.toolkit/repository/</url>
 		</repository>
 	</repositories>

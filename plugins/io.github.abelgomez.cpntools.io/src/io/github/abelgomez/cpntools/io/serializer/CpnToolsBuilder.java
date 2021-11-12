@@ -244,7 +244,9 @@ public class CpnToolsBuilder {
 		Element placeend = document.createElement("placeend");
 		placeend.setAttribute("idref", getModelElementId(arc.getPlace()));
 		element.appendChild(placeend);
-		element.appendChild(createAnnot(arc.getAnnot()));
+		if (arc.getAnnot() != null) {
+			element.appendChild(createAnnot(arc.getAnnot()));
+		}
 		return element;
 	}
 

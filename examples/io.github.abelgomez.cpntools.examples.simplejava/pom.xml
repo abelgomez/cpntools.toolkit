@@ -7,6 +7,10 @@
 	<version>0.1.0-SNAPSHOT</version>
 	<name>Simple Java Example</name>
 	<description>Project demonstrating how to use the CPN Tools Toolking plug-ins from a simple Java program</description>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
 	<repositories>
 		<repository>
 			<id>local-maven-repo</id>
@@ -14,11 +18,6 @@
 		</repository>
 	</repositories>
 	<dependencies>
-		<dependency>
-			<groupId>org.eclipse.emf</groupId>
-			<artifactId>org.eclipse.emf.common</artifactId>
-			<version>2.12.0</version>
-		</dependency>
 		<dependency>
 			<groupId>io.github.abelgomez.cpntools</groupId>
 			<artifactId>io.github.abelgomez.cpntools</artifactId>
@@ -30,4 +29,19 @@
 			<version>0.5.0-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>io.github.abelgomez.cpntools.examples.simplejava.App</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

@@ -18,7 +18,7 @@ import io.github.abelgomez.cpntools.Trans;
 import io.github.abelgomez.cpntools.io.serializer.CpnToolsBuilder;
 import io.github.abelgomez.cpntools.io.serializer.SerializationException;
 
-public class Main {
+public class App {
 
 	public static void main(String[] args) throws SerializationException, IOException {
 		Cpnet net = buildSampleNet();

@@ -39,3 +39,32 @@ Feature for the SDK. Includes all the previous features, plus EMF SDK and the ad
 
 * io.github.abelgomez.cpntools.io.test
 
+## Using the CPN Toolkit in a regular Java program
+
+To use the CPN Tools Toolkit in your Java program, simply add the following repository and dependencies to your `pom.xml` file:
+
+```xml
+<repositories>
+    <repository>
+        <id>local-maven-repo</id>
+        <url>https://abelgomez.github.io/cpntools.toolkit/repository/</url>
+    </repository>
+    <!-- Other repositories (if needed)... -->
+</repositories>
+<!- ... -->
+<dependencies>
+    <dependency>
+        <groupId>io.github.abelgomez.cpntools</groupId>
+        <artifactId>io.github.abelgomez.cpntools</artifactId>
+        <version>0.5.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+        <groupId>io.github.abelgomez.cpntools</groupId>
+        <artifactId>io.github.abelgomez.cpntools.io</artifactId>
+        <version>0.5.0-SNAPSHOT</version>
+    </dependency>
+    <!-- Other dependencies (if needed)... -->
+</dependencies>
+```
+
+See a full example in the [`examples/io.github.abelgomez.cpntools.examples.simplejava`](examples/io.github.abelgomez.cpntools.examples.simplejava) directory.

@@ -2,7 +2,7 @@
 
 ## Instructions
 
-To use the CPN Tools Toolkit in jor Java program, simply add the following repository and dependencies to your `pom.xml` file:
+To use the CPN Tools Toolkit in your Java program, simply add the following repository and dependencies to your `pom.xml` file:
 
 ```xml
 <repositories>

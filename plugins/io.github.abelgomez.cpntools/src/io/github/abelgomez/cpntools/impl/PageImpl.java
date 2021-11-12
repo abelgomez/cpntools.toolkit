@@ -295,16 +295,18 @@ public class PageImpl extends MinimalEObjectImpl.Container implements Page {
 		DirectedSparseGraph<DiagramElement, Arc> graph = new DirectedSparseGraph<DiagramElement, Arc>();
 		
 		for (Arc arc : this.getArcs()) {
-			graph.addVertex(arc.getPlace());
-			graph.addVertex(arc.getTrans());
+			if (arc.getPlace() != null && arc.getTrans() != null) {
+				graph.addVertex(arc.getPlace());
+				graph.addVertex(arc.getTrans());
 		
-			Pair<DiagramElement> pair = null;
-			if (arc.getOrientation() == Orientation.TTO_P) {
-				pair = new Pair<DiagramElement>(arc.getTrans(), arc.getPlace());
-			} else {
-				pair = new Pair<DiagramElement>(arc.getPlace(), arc.getTrans());
+				Pair<DiagramElement> pair = null;
+				if (arc.getOrientation() == Orientation.TTO_P) {
+					pair = new Pair<DiagramElement>(arc.getTrans(), arc.getPlace());
+				} else {
+					pair = new Pair<DiagramElement>(arc.getPlace(), arc.getTrans());
+				}
+				graph.addEdge(arc, pair);
 			}
-			graph.addEdge(arc, pair);
 		}
 		
 		KKLayout<DiagramElement, Arc> layout = new KKLayout<DiagramElement, Arc>(graph);

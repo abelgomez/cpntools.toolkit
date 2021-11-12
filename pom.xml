@@ -18,6 +18,7 @@
 	<properties>
 		<tycho.version>2.5.0</tycho.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.deploy.skip>true</maven.deploy.skip>
 	</properties>
 	<groupId>io.github.abelgomez.cpntools</groupId>
 	<artifactId>root</artifactId>
@@ -31,6 +32,13 @@
 	</modules>
 	<build>
 		<plugins>
+			<plugin>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.5.2</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
@@ -81,4 +89,10 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>CPN Tools Repository</id>
+			<url>file:repository.out/</url>
+		</repository>
+	</distributionManagement>
 </project>

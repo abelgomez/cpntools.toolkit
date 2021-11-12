@@ -67,4 +67,4 @@ To use the CPN Tools Toolkit in your Java program, simply add the following repo
 </dependencies>
 ```
 
-See a full example in the [`examples/io.github.abelgomez.cpntools.examples.simplejava`](examples/io.github.abelgomez.cpntools.examples.simplejava) directory.
+See some examples in the [`examples/io.github.abelgomez.cpntools.examples.simplejava`](examples/io.github.abelgomez.cpntools.examples.simplejava) directory.

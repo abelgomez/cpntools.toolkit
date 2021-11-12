@@ -51,7 +51,7 @@ To use the CPN Tools Toolkit in your Java program, simply add the following repo
     </repository>
     <!-- Other repositories (if needed)... -->
 </repositories>
-<!- ... -->
+<!-- ... -->
 <dependencies>
     <dependency>
         <groupId>io.github.abelgomez.cpntools</groupId>

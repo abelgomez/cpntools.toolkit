@@ -116,7 +116,7 @@
 	<distributionManagement>
 		<repository>
 			<id>CPN Tools Repository</id>
-			<url>file:repository.out/</url>
+			<url>file:repository/</url>
 		</repository>
 	</distributionManagement>
 </project>

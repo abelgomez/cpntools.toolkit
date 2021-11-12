@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <units size='1'>
-  <unit id='io.github.abelgomez.cpntools' version='0.5.0.202111122209' generation='2'>
-    <update id='io.github.abelgomez.cpntools' range='[0.0.0,0.5.0.202111122209)' severity='0'/>
+  <unit id='io.github.abelgomez.cpntools' version='0.5.0.202111122242' generation='2'>
+    <update id='io.github.abelgomez.cpntools' range='[0.0.0,0.5.0.202111122242)' severity='0'/>
     <properties size='8'>
       <property name='df_LT.pluginName' value='CPN Tools Metamodel Plug-in'/>
       <property name='df_LT.providerName' value='Abel Gómez'/>
@@ -13,12 +13,12 @@
       <property name='maven-version' value='0.5.0-SNAPSHOT'/>
     </properties>
     <provides size='8'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='io.github.abelgomez.cpntools' version='0.5.0.202111122209'/>
-      <provided namespace='osgi.bundle' name='io.github.abelgomez.cpntools' version='0.5.0.202111122209'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='io.github.abelgomez.cpntools' version='0.5.0.202111122242'/>
+      <provided namespace='osgi.bundle' name='io.github.abelgomez.cpntools' version='0.5.0.202111122242'/>
       <provided namespace='java.package' name='io.github.abelgomez.cpntools' version='0.0.0'/>
       <provided namespace='java.package' name='io.github.abelgomez.cpntools.impl' version='0.0.0'/>
       <provided namespace='java.package' name='io.github.abelgomez.cpntools.util' version='0.0.0'/>
-      <provided namespace='osgi.identity' name='io.github.abelgomez.cpntools' version='0.5.0.202111122209'>
+      <provided namespace='osgi.identity' name='io.github.abelgomez.cpntools' version='0.5.0.202111122242'>
         <properties size='1'>
           <property name='type' value='osgi.bundle'/>
         </properties>
@@ -38,13 +38,13 @@
       </requiredProperties>
     </requires>
     <artifacts size='1'>
-      <artifact classifier='osgi.bundle' id='io.github.abelgomez.cpntools' version='0.5.0.202111122209'/>
+      <artifact classifier='osgi.bundle' id='io.github.abelgomez.cpntools' version='0.5.0.202111122242'/>
     </artifacts>
     <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
     <touchpointData size='1'>
       <instructions size='1'>
         <instruction key='manifest'>
-          Bundle-SymbolicName: io.github.abelgomez.cpntools;singleton:=true&#xA;Bundle-Version: 0.5.0.202111122209&#xA;
+          Bundle-SymbolicName: io.github.abelgomez.cpntools;singleton:=true&#xA;Bundle-Version: 0.5.0.202111122242&#xA;
         </instruction>
       </instructions>
     </touchpointData>

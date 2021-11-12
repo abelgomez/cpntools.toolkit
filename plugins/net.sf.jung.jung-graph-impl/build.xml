@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="net.sf.jung.jung-api" default="populate-project" basedir=".">
+
+	<property name="jung-zip-url" value="https://github.com/jrtom/jung/archive/refs/tags/jung-2.1.1.zip" />
+	<property name="temp-file" value="tmp.zip" />
+	<property name="temp-dir" value="tmp" />
+	
+	<target name="populate-project">
+		<delete dir="${basedir}/src" />
+		<get src="${jung-zip-url}" dest="${temp-file}"/>
+		<unzip src="${temp-file}" dest="${temp-dir}"/>
+		<move todir="${basedir}/src">
+			<fileset dir="${temp-dir}/jung-jung-2.1.1/jung-graph-impl/src/main/java" />
+		</move>
+		<delete file="${temp-file}" deleteonexit="true" />
+		<delete dir="${temp-dir}" deleteonexit="true" />
+	</target>
+
+</project>

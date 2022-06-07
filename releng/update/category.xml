@@ -17,11 +17,16 @@
       <category name="CPN Tools Toolkit"/>
    </feature>
    <feature id="io.github.abelgomez.cpntools.sdk.feature">
-      <category name="CPN Tools Toolkit"/>
+      <category name="CPN Tools Toolkit SDK"/>
    </feature>
    <category-def name="CPN Tools Toolkit" label="CPN Tools Toolkit">
       <description>
-         Plug-ins supporting the generation and serialization of Petri nets conforming to the CPN Tools XML format.
+         Plug-ins to create CPN Tools files from EMF. In addition, it provides capabilities to layout and serialize the EMF-compatible Petri nets into the &quot;normative&quot; CPN Tools XML format.
+      </description>
+   </category-def>
+   <category-def name="CPN Tools Toolkit SDK" label="CPN Tools Toolkit SDK">
+      <description>
+         Plug-ins supporting the development of tools that rely on the CPN Tools toolkit. May install SDK components from the Eclipse site.
       </description>
    </category-def>
    <repository-reference location="http://download.eclipse.org/releases/2020-06" enabled="true" />
